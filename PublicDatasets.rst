@@ -1277,4 +1277,4 @@ Complementary Collections
 
 Credit
 ------
-`AwesomeData <https://github.com/awesomedata/awesome-public-datasets>`
+`AwesomeData <https://github.com/awesomedata/awesome-public-datasets>`_
