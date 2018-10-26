@@ -35,3 +35,8 @@ ecom[ecom['Credit Card'] == 4926535242672853]['Email']
 
 # people have American Express as their Credit Card Provider *and made a purchase above $95 
 ecom[(ecom['CC Provider'] == 'American Express') & (ecom['Purchase Price'] > 95)].count()
+
+# credit cards that expires in 2025?
+sum(ecom['CC Exp Date'].apply(lambda exp: exp[3:] == '25'))
+ecom[ecom['CC Exp Date'].apply(lambda exp: exp[3:] == '25')].count()
+
