@@ -40,3 +40,5 @@ ecom[(ecom['CC Provider'] == 'American Express') & (ecom['Purchase Price'] > 95)
 sum(ecom['CC Exp Date'].apply(lambda exp: exp[3:] == '25'))
 ecom[ecom['CC Exp Date'].apply(lambda exp: exp[3:] == '25')].count()
 
+# top 5 most popular email providers/hosts
+ecom['Email'].apply(lambda email: email.split('@')[1]).value_counts().head(5)
