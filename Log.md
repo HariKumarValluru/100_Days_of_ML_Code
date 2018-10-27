@@ -15,3 +15,12 @@
 **Thoughts** : It was really fun.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/e36a65bb164738691862ddb015c08bb374182234)
+
+
+## Day 3 : Oct 27, 2018
+
+**Today's Progress** : Created some basic visualation using matplotlib and learning seaborn library for visualization which is built on top of matplotlib 
+
+**Thoughts** : Seaborn is high-level interface for drawing attractive statistical graphics. It is a handy tool for visualization. 
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/39eff11945286189db4c8913d3d83404a6990bb1)
