@@ -23,3 +23,12 @@ ax.plot(x,y)
 ax.set_xlabel('X Label')
 ax.set_ylabel('Y Label')
 ax.set_title('Basic Visualization')
+
+# create fig object with two axes on it
+fig = plt.figure()
+ax1 = fig.add_axes([0,0,1,1])
+ax2 = fig.add_axes([.2,.5,.2,.2])
+
+# ploting x,y on both axes
+ax1.plot(x,y)
+ax2.plot(x,y)
