@@ -31,4 +31,25 @@ ax2 = fig.add_axes([.2,.5,.2,.2])
 
 # ploting x,y on both axes
 ax1.plot(x,y, color = 'red')
+ax1.set_xlabel('X')
+ax1.set_ylabel('Y')
 ax2.plot(x,y, color = 'green')
+ax2.set_xlabel('X')
+ax2.set_ylabel('Y')
+
+fig = plt.figure()
+ax1 = fig.add_axes([0,0,1,1])
+ax2 = fig.add_axes([.2,.5,.4,.4])
+
+# Large Plot
+ax1.plot(x,z)
+ax1.set_xlabel('X')
+ax1.set_ylabel('Z')
+
+# Insert
+ax2.plot(x,y)
+ax2.set_xlabel('X')
+ax2.set_ylabel('y')
+ax2.set_title('Zoom')
+ax2.set_xlim([20,22])
+ax2.set_ylim([30,50])
