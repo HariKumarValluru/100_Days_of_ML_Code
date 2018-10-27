@@ -38,3 +38,7 @@ sns.swarmplot('day', 'total_bill', data=tips)
 # Swarm and Violin Plot
 sns.violinplot('day', 'total_bill', data=tips)
 sns.swarmplot('day', 'total_bill', data=tips, color='black')
+
+# Factor Plot
+sns.factorplot('day', 'total_bill', data=tips, kind='bar')
+sns.factorplot('day', 'total_bill', data=tips, kind='violin')
