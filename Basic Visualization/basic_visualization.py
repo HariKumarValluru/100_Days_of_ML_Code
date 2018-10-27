@@ -30,5 +30,5 @@ ax1 = fig.add_axes([0,0,1,1])
 ax2 = fig.add_axes([.2,.5,.2,.2])
 
 # ploting x,y on both axes
-ax1.plot(x,y)
-ax2.plot(x,y)
+ax1.plot(x,y, color = 'red')
+ax2.plot(x,y, color = 'green')
