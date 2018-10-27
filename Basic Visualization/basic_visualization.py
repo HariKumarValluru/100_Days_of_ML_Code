@@ -57,4 +57,4 @@ ax2.set_ylim([30,50])
 # create subplots
 fig, axes = plt.subplots(1,2, figsize=(12,2))
 axes[0].plot(x,y, color='blue', linestyle='--', linewidth=3)
-axes[1].plot(x,z, color='red', linewidth=3, )
+axes[1].plot(x,z, color='red', linewidth=3)
