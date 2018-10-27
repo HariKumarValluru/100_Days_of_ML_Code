@@ -19,7 +19,7 @@
 
 ## Day 3 : Oct 27, 2018
 
-**Today's Progress** : Created some basic visualation using matplotlib and learning seaborn library for visualization which is built on top of matplotlib 
+**Today's Progress** : Created some basic visualation using matplotlib and learning seaborn library for visualization which is built on top of matplotlib.
 
 **Thoughts** : Seaborn is high-level interface for drawing attractive statistical graphics. It is a handy tool for visualization. 
 
