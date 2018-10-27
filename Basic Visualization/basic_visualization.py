@@ -53,3 +53,6 @@ ax2.set_ylabel('y')
 ax2.set_title('Zoom')
 ax2.set_xlim([20,22])
 ax2.set_ylim([30,50])
+
+# create subplots
+fig, axes = plt.subplots(1,2)
