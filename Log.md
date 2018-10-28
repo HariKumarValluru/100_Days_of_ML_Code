@@ -29,6 +29,6 @@
 
 **Today's Progress** : Learning seaborn library for visualization is completed. Created visualization by taking Titanic dataset by using seaborn.
 
-**Thoughts** : It is really fun. 
+**Thoughts** : With Seaborn, we can plot, attractive charts in a Simple way.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/5769e7752bf72ea5a95719761d1ebd17e695169f)
