@@ -19,8 +19,16 @@
 
 ## Day 3 : Oct 27, 2018
 
-**Today's Progress** : Created some basic visualation using matplotlib and learning seaborn library for visualization which is built on top of matplotlib.
+**Today's Progress** : Created some basic visualization using matplotlib and learning seaborn library for visualization which is built on top of matplotlib.
 
 **Thoughts** : Seaborn is high-level interface for drawing attractive statistical graphics. It is a handy tool for visualization. 
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/39eff11945286189db4c8913d3d83404a6990bb1)
+
+## Day 4 : Oct 28, 2018
+
+**Today's Progress** : Learning seaborn library for visualization is completed. Created visualization by taking Titanic dataset by using seaborn.
+
+**Thoughts** : It is really fun. 
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/5769e7752bf72ea5a95719761d1ebd17e695169f)
