@@ -43,6 +43,6 @@
 
 ## Day 6 : Oct 30, 2018
 
-**Today's Progress** : Done data analysize for Emergency - 911 Calls dataset from kaggle. Data analysis of bank stock prices and see how they progressed throughout the financial crisis all the way to early 2016.
+**Today's Progress** : Worked on data analysize for Emergency - 911 Calls dataset from kaggle. Data analysis of bank stock prices and see how they progressed throughout the financial crisis all the way to early 2016.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/b82475ee278d741c0bb5d944f006b37f67e805d8), [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f861b09e362d65fc6f645f59bdb4a908090da21a)
