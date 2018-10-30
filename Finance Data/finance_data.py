@@ -51,3 +51,21 @@ for tick in tickers:
 
 # creating a pairplot
 sns.pairplot(returns[1:])
+
+# Worst Drop (4 of them on Inauguration day)
+returns.idxmin()
+
+# Best Single Day Gain
+returns.idxmax()
+
+# riskiest
+returns.std() 
+
+# Very similar risk profiles
+returns.loc['2015-01-01':'2015-12-31'].std()
+
+# 2015 returns for Morgan Stanley 
+sns.distplot(returns.loc['2015-01-01':'2015-12-31']['MS Return'],color='green',bins=100)
+
+#2008 returns for CitiGroup 
+sns.distplot(returns.loc['2008-01-01':'2008-12-31']['C Return'],color='red',bins=100)
