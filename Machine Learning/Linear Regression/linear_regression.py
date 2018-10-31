@@ -30,3 +30,27 @@ sns.pairplot(customers)
 # Creating a linear model plot for Yearly Amount Spent vs Length of Membership
 sns.lmplot('Yearly Amount Spent', 'Length of Membership', data = customers)
 
+# Spliting the data into training and test sets
+X = customers.iloc[:, 3:7].values
+y = customers.iloc[:, -1].values
+
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, 
+                                                    random_state = 101)
+
+# Training our model on our training data
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# coefficients of the model
+model.coef_
+
+# predicting the test data
+y_pred = model.predict(X_test)
+
+# visualising the test values vs predicted values
+plt.scatter(y_test, y_pred)
+plt.xlabel("Y Test (True Values)")
+plt.ylabel("Predicted Values")
