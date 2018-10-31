@@ -60,3 +60,38 @@ bymonth['lat'].plot()
 
 # creating a linear model plot for number of calls per month
 sns.lmplot('Month','twp', data=bymonth.reset_index())
+
+# creating new date column
+dataset['Date'] = dataset['timeStamp'].apply(lambda time: time.date())
+
+# group by date
+dataset.groupby('Date').count()['lat'].plot()
+plt.tight_layout()
+
+# creating plots for 3 different reasons
+dataset[dataset['Reason'] == 'Traffic'].groupby('Date').count()['lat'].plot()
+plt.title("Traffic")
+plt.tight_layout()
+
+dataset[dataset['Reason'] == 'Fire'].groupby('Date').count()['lat'].plot()
+plt.title("Fire")
+plt.tight_layout()
+
+dataset[dataset['Reason'] == 'EMS'].groupby('Date').count()['lat'].plot()
+plt.title("EMS")
+plt.tight_layout()
+
+# Creating heatmap for hours
+dayHour = dataset.groupby(by=['Day of Week', 'Hour']).count()['Reason'].unstack()
+sns.heatmap(dayHour, cmap="coolwarm")
+
+# creating a clustermap
+sns.clustermap(dayHour, cmap="coolwarm")
+
+# Creating heatmap for Month
+dayMonth = dataset.groupby(by=['Day of Week', 'Month']).count()['Reason'].unstack()
+
+sns.heatmap(dayMonth, cmap="coolwarm")
+
+# creating a clustermap
+sns.clustermap(dayMonth, cmap="coolwarm")
