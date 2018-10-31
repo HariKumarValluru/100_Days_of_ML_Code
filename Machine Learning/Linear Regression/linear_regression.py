@@ -54,3 +54,24 @@ y_pred = model.predict(X_test)
 plt.scatter(y_test, y_pred)
 plt.xlabel("Y Test (True Values)")
 plt.ylabel("Predicted Values")
+
+# Evaluating the model performance
+from sklearn import metrics
+
+# Calculating Mean Absoulte Error
+print("MAE", metrics.mean_absolute_error(y_test, y_pred))
+
+# Calculating Mean Squared Error
+print("MSE", metrics.mean_squared_error(y_test, y_pred))
+
+# Calculating Root Mean Squared Error
+print("RMSE", np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
+
+# Variance Score
+metrics.explained_variance_score(y_test, y_pred)
+
+# exploring the residuals to make sure everything is okay with our data
+sns.distplot((y_test - y_pred), bins = 50)
+
+# coeffecients
+pd.DataFrame(model.coef_, customers.iloc[:, 3:7].columns,columns = ['Coeffecient'])
