@@ -53,3 +53,11 @@
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/5f9f7a92e009f3fe6d14b2945f166171d1268458)
 
+## Day 8 : Nov 1, 2018
+
+**Today's Progress** : I have implemented Linear regression model algorithm from scratch and used it to prediction on a customer data of a eCommerce company.
+
+**Thoughts** : Yesterday, I have used scikit learn library for predicting data. Today, I have implemented from scratch without scikit library, it was really a great experience.
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/5f9f7a92e009f3fe6d14b2945f166171d1268458)
+
