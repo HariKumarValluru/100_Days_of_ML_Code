@@ -61,3 +61,8 @@
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/0b9f18980d1f0d54d80cc527cc3bc26922f9c54a)
 
+## Day 9 : Nov 2, 2018
+
+**Today's Progress** : Fine tuned the Linear Regression model algorithm.
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ab2fca9502c4efd675fa0a0eaf46504848bbefd9)
