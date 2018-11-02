@@ -4,15 +4,15 @@ import numpy as np
 class LinearRegression():
     
     def __init__(self):
-        self.b0, self.b1 = 0.0, 0.0
+        self.__a, self.__b = 0.0, 0.0
     
     def fit(self, x, y):
         mean_x, mean_y = np.mean(x), np.mean(y)
         r, sx, sy = self.corrcoeff(x, mean_x, y, mean_y)
         Sx = np.sqrt(sx / (np.size(x) - 1))
         Sy = np.sqrt(sy / (np.size(y) - 1))
-        self.b0 = self.slope(r, Sy, Sx)
-        self.b1 = self.intercept_(x, y, self.b0)
+        self.__b = self.slope(r, Sy, Sx)
+        self.__a = self.intercept_(x, y, self.__b)
         return
     
     # Calculate covariance xy
@@ -26,9 +26,6 @@ class LinearRegression():
     # Calculate the variance of a list of numbers
     def variance(self, values, mean):
         return sum([(x - mean)**2 for x in values ])
-    
-    def stdValues(self, s, n):
-        return s,n
     
     def corrcoeff(self, x, mean_x, y, mean_y):
         covar = self.covariance(x, mean_x, y, mean_y)
@@ -49,6 +46,14 @@ class LinearRegression():
         a = mean_y - (b * mean_x)
         return a
     
-    def predict(x):
-        pass
+    def predict(self, x):
+        y_pred = []
+        b0, b1 = self.__a, self.__b
+        if np.size(x) > 1:
+            for i in x:
+                y_pred.append(b0 + (b1 * i))
+        else:
+            y_pred.append(b0 + (b1 * x))
+        return np.array(y_pred)
+       
         
