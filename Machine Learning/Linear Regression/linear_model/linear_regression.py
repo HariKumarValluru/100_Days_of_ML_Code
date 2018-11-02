@@ -4,12 +4,16 @@ import numpy as np
 class LinearRegression():
     
     def __init__(self):
-        pass
+        self.b0, self.b1 = 0.0, 0.0
     
     def fit(self, x, y):
         mean_x, mean_y = np.mean(x), np.mean(y)
-        r = self.corrcoeff(x, mean_x, y, mean_y)
-        pass
+        r, sx, sy = self.corrcoeff(x, mean_x, y, mean_y)
+        Sx = np.sqrt(sx / (np.size(x) - 1))
+        Sy = np.sqrt(sy / (np.size(y) - 1))
+        self.b0 = self.slope(r, Sy, Sx)
+        self.b1 = self.intercept_(x, y, self.b0)
+        return
     
     # Calculate covariance xy
     def covariance(self, x, mean_x, y, mean_y):
@@ -23,19 +27,28 @@ class LinearRegression():
     def variance(self, values, mean):
         return sum([(x - mean)**2 for x in values ])
     
+    def stdValues(self, s, n):
+        return s,n
+    
     def corrcoeff(self, x, mean_x, y, mean_y):
         covar = self.covariance(x, mean_x, y, mean_y)
-        variance_x = self.variance(x, mean_x)
-        variance_y = self.variance(y, mean_y)
-        print(covar, variance_x, variance_y)
-        pass
+        
+        sx = self.variance(x, mean_x)
+        sy = self.variance(y, mean_y)
+        
+        corrcoeff = covar / np.sqrt(sx * sy)
+        
+        return corrcoeff, sx, sy
     
-    def slope():
-        pass
+    def slope(self, r, Sy, Sx):
+        b = r * (Sy / Sx)
+        return b
     
-    def intercept_():
-        pass
+    def intercept_(self, x, y, b):
+        mean_x, mean_y = np.mean(x), np.mean(y)
+        a = mean_y - (b * mean_x)
+        return a
     
-    def predict():
+    def predict(x):
         pass
         
