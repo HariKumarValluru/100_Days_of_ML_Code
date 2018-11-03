@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from linear_model import LinearRegression, train_test_split
 
-dataset = pd.read_csv("EcommerceCustomers.csv")
+dataset = pd.read_csv("datasets/EcommerceCustomers.csv")
 
 X = dataset['Length of Membership'].values
 y = dataset['Yearly Amount Spent'].values
