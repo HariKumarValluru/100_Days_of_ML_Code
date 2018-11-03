@@ -4,11 +4,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from linear_model import backwardElimination
 
 # Importing the dataset
 dataset = pd.read_csv('datasets/50_Startups.csv')
 X = dataset.iloc[:, :-1].values
-y = dataset.iloc[:, 4].values
+y = dataset.iloc[:, -1].values
 
 # Encoding categorical data
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
@@ -32,3 +33,8 @@ model.fit(X_train, y_train)
 
 # Predicting the Test set results
 y_pred = model.predict(X_test)
+
+# optimal model using backward elimination
+SL = 0.05
+X_opt = X[:, [0, 1, 2, 3, 4]]
+X_Modeled = backwardElimination(X_opt, y, SL)

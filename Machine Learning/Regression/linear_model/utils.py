@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 import numpy as np
+import statsmodels.formula.api as sm
 
 def train_test_split(X, y, test_size=0.5, shuffle=True, random_state=None):
     """ Split the data into train and test sets """
@@ -21,5 +21,15 @@ def shuffle_data(X, y, seed=None):
     np.random.shuffle(idx)
     return X[idx], y[idx]
 
-def backwardElimination(x, SL):
-   pass
+def backwardElimination(x, y, SL):
+    """ Backward Elimination with p-values """
+    numVars = len(x[0])
+    for i in range(0, numVars):
+        regressor_OLS = sm.OLS(y, x).fit()
+        maxVar = max(regressor_OLS.pvalues).astype(float)
+        if maxVar > SL:
+            for j in range(0, numVars - i):
+                if (regressor_OLS.pvalues[j].astype(float) == maxVar):
+                    x = np.delete(x, j, 1)
+    print(regressor_OLS.summary())
+    return x
