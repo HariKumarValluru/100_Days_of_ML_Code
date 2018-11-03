@@ -20,3 +20,6 @@ def shuffle_data(X, y, seed=None):
     idx = np.arange(X.shape[0])
     np.random.shuffle(idx)
     return X[idx], y[idx]
+
+def backwardElimination(x, SL):
+   pass
