@@ -66,3 +66,9 @@
 **Today's Progress** : Fine tuned the Linear Regression model algorithm.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ab2fca9502c4efd675fa0a0eaf46504848bbefd9)
+
+## Day 10 : Nov 3, 2018
+
+**Today's Progress** : I have implemented "Multiple Linear Regression" model on 50 startup companies dataset from kaggle. Finding the optimal model using backward elimination.
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/156525331bb794ae122c43551425da2fb8b2e107)
