@@ -79,4 +79,4 @@
 
 **Thoughts** : Machine Learning become more fun when these algorithms are implementing from scratch, it was really a great experience.
 
-**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ccadf49127fb9a0c4e6c9c787d8a1a60c5c1a340)
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/7eb6e67729825aa9001629278c70843afa0aedbd)
