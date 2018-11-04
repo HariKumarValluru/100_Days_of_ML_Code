@@ -72,3 +72,11 @@
 **Today's Progress** : I have implemented "Multiple Linear Regression" model on 50 startup companies dataset from kaggle. Finding the optimal model using backward elimination.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/156525331bb794ae122c43551425da2fb8b2e107)
+
+## Day 11 : Nov 4, 2018
+
+**Today's Progress** : Implementing "Multiple Linear Regression" model from scratch.
+
+**Thoughts** : Machine Learning become more fun when these algorithms are implementing from scratch, it was really a great experience.
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ccadf49127fb9a0c4e6c9c787d8a1a60c5c1a340)
