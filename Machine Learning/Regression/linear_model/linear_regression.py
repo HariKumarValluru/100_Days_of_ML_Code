@@ -1,4 +1,3 @@
-# Linear Regression Model
 import numpy as np
 
 class LinearRegression():
@@ -55,5 +54,3 @@ class LinearRegression():
         else:
             y_pred.append(b0 + (b1 * x))
         return np.array(y_pred)
-       
-        

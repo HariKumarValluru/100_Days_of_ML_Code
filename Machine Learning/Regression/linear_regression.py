@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # loading the dataset
-customers = pd.read_csv("EcommerceCustomers.csv")
+customers = pd.read_csv("datasets/EcommerceCustomers.csv")
 
 # getting the object types
 customers.info()
@@ -31,7 +31,7 @@ sns.pairplot(customers)
 sns.lmplot('Yearly Amount Spent', 'Length of Membership', data = customers)
 
 # Spliting the data into training and test sets
-X = customers.iloc[:, 3:7].values
+X = customers.iloc[:, 6:7].values
 y = customers.iloc[:, -1].values
 
 
