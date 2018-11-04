@@ -57,3 +57,27 @@ def variance(X):
     n_samples = np.shape(X)[0]
     variance = (1 / n_samples) * np.diag((X - mean).T.dot(X - mean))
     return variance
+
+def cost_function(X, Y, B):
+    m = len(Y)
+    J = np.sum((X.dot(B) - Y) ** 2)/(2 * m)
+    return J
+
+def gradient_descent(X, Y, B, alpha, iterations):
+    cost_history = [0] * iterations
+    m = len(Y)
+    
+    for iteration in range(iterations):
+        # Hypothesis Values
+        h = X.dot(B)
+        # Difference b/w Hypothesis and Actual Y
+        loss = h - Y
+        # Gradient Calculation
+        gradient = X.T.dot(loss) / m
+        # Changing Values of B using Gradient
+        B = B - alpha * gradient
+        # New Cost Value
+        cost = cost_function(X, Y, B)
+        cost_history[iteration] = cost
+        
+    return B, cost_history
