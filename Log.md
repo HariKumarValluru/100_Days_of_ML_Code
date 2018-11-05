@@ -83,6 +83,6 @@
 
 ## Day 12 : Nov 5, 2018
 
-**Today's Progress** : Implemented Logistic regression on advertsing data.
+**Today's Progress** : Implemented multiple linear regression without gradient descent and Implemented Logistic regression on advertsing data.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/8c6bd89bb2e246e9710ede78015bb7ba0409fb25)
