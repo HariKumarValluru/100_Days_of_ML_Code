@@ -12,6 +12,7 @@ y = dataset.iloc[:, -1].values
 n,_ = dataset.shape
 x0 = np.ones(n)
 X = np.column_stack((x0, X))
+
 # Initial Coefficients
 B = np.array([0, 0, 0])
 alpha = 0.0001
@@ -21,3 +22,7 @@ inital_cost = cost_function(X, y, B)
 newB, cost_history = gradient_descent(X, y, B, alpha, 100000)
 
 Y_pred = X.dot(newB)
+
+from linear_model.ml_utils import rmse
+
+print("RMSE: {0:.3f}".format(rmse(y, Y_pred)))
