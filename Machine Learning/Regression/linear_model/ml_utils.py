@@ -94,3 +94,35 @@ def r2_score(Y, Y_pred):
     ss_res = sum((Y - Y_pred) ** 2)
     r2 = 1 - (ss_res / ss_tot)
     return r2
+
+# Covariance between two vectors
+def cov_matrix(_y, _x):
+    
+    if _x.shape[0] != _y.shape[0]:
+        raise Exception("Shapes do not match")
+
+    # make sure we use matrix multiplication, not array multiplication
+    _xm = np.matrix(np.mean(_x, axis=0).repeat(_x.shape[0], axis = 0).reshape(_x.shape))
+    _ym = np.matrix(np.mean(_y, axis=0).repeat(_y.shape[0], axis = 0).reshape(_y.shape))
+
+    return ((_x - _xm).T * (_y - _ym)) * 1 / _x.shape[0]
+
+def compute_b0_bn(ym, Xm):
+    
+    if ym.shape[1] != 1:
+        raise Exception ("ym should be a vector with shape [n, 1]")
+        
+    if Xm.shape[0] != ym.shape[0]:
+        raise Exception ("Xm should have the same amount of lines as ym")
+    
+    C_y_x = cov_matrix(ym, Xm)
+    C_x_x = cov_matrix(Xm, Xm)
+
+    b1_bn  = C_x_x.I * C_y_x
+    
+    x_mean  = np.matrix(np.mean(Xm, axis = 0))
+    y_mean  = np.mean(ym)
+    
+    b0 = -x_mean * b1_bn + y_mean
+    
+    return (np.float(b0), np.array(b1_bn).flatten())
