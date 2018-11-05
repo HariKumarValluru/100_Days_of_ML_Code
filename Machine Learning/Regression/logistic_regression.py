@@ -19,5 +19,14 @@ sns.pairplot(ad_data, hue='Clicked on Ad')
 X = ad_data.iloc[:, [0,1,2,3,6]].values
 y = ad_data.iloc[:, -1].values
 
+# Spliting the data into trainig and test sets
 from linear_model.ml_utils import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=101)
+
+# Fitting the logistic regression to training set
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# predicting the test set results
+y_pred = model.predict(X_test)
