@@ -23,6 +23,6 @@ X = X[:, 1:]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, 
                                                     random_state=101)
 
-ret = compute_b0_bn((y_test.shape[0], 1), X_test)
+ret = compute_b0_bn(y_test.reshape((y_test.shape[0], 1)), X_test)
 
-y_pred = X.dot(ret[1])
+y_pred = X_test.dot(ret[1])
