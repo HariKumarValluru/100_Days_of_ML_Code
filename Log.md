@@ -80,3 +80,9 @@
 **Thoughts** : Machine Learning become more fun when these algorithms are implementing from scratch, it was really a great experience.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/7eb6e67729825aa9001629278c70843afa0aedbd)
+
+## Day 11 : Nov 4, 2018
+
+**Today's Progress** : Implemented Logistic regression on advertsing data.
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/8c6bd89bb2e246e9710ede78015bb7ba0409fb25)
