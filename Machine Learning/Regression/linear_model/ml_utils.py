@@ -60,9 +60,6 @@ def variance(X):
 
 def cost_function(X, Y, B):
     m = len(Y)
-    X = X.reshape(-1, 1)
-    Y = Y.reshape(-1, 1)
-    B = B.reshape(-1, 1)
     J = np.sum((X.dot(B) - Y) ** 2)/(2 * m)
     return J
 
