@@ -30,3 +30,8 @@ model.fit(X_train, y_train)
 
 # predicting the test set results
 y_pred = model.predict(X_test)
+
+# classification report
+from sklearn.metrics import classification_report, confusion_matrix
+print(classification_report(y_test, y_pred))
+print(confusion_matrix(y_test, y_pred))
