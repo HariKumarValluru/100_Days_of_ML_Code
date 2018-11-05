@@ -81,7 +81,7 @@
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/7eb6e67729825aa9001629278c70843afa0aedbd)
 
-## Day 11 : Nov 4, 2018
+## Day 12 : Nov 5, 2018
 
 **Today's Progress** : Implemented Logistic regression on advertsing data.
 
