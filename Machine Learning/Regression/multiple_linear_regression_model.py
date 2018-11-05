@@ -23,6 +23,8 @@ newB, cost_history = gradient_descent(X, y, B, alpha, 100000)
 
 Y_pred = X.dot(newB)
 
-from linear_model.ml_utils import rmse
+from linear_model.ml_utils import rmse, r2_score
 
 print("RMSE: {0:.3f}".format(rmse(y, Y_pred)))
+
+print("R2 Score: {0:.3f}".format(r2_score(y, Y_pred)))

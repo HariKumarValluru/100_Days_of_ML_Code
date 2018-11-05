@@ -86,3 +86,7 @@ def gradient_descent(X, Y, B, alpha, iterations):
 def rmse(Y, Y_pred):
     rmse = np.sqrt(sum((Y - Y_pred) ** 2) / len(Y))
     return rmse
+
+# Model Evaluation - R2 Score
+def r2_score(Y, Y_pred):
+    pass
