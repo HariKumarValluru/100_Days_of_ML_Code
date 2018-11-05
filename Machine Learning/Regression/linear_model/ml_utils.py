@@ -81,3 +81,8 @@ def gradient_descent(X, Y, B, alpha, iterations):
         cost_history[iteration] = cost
         
     return B, cost_history
+
+# Model Evaluation - RMSE (Root Mean Square Error)
+def rmse(Y, Y_pred):
+    rmse = np.sqrt(sum((Y - Y_pred) ** 2) / len(Y))
+    return rmse
