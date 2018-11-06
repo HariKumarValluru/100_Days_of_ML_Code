@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from linear_model.ml_utils import cost_function, gradient_descent
+from Utils.ml_utils import cost_function, gradient_descent
 
 dataset = pd.read_csv('datasets/student.csv')
 

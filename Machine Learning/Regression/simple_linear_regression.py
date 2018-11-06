@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from linear_model import LinearRegression
-from linear_model.ml_utils import train_test_split
+from Models.linear_regression import LinearRegression
+from Utils.ml_utils import train_test_split
 
 dataset = pd.read_csv("datasets/EcommerceCustomers.csv")
 

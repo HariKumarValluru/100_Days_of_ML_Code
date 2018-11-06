@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from linear_model.ml_utils import accuracy_score
+from Regression.linear_model.ml_utils import accuracy_score
 
 ad_data = pd.read_csv("datasets/advertising.csv")
 

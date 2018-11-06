@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from linear_model.ml_utils import train_test_split, compute_b0_bn
+from Utils.ml_utils import train_test_split, compute_b0_bn
 
 # load data
 dataset = pd.read_csv("datasets/50_Startups.csv")

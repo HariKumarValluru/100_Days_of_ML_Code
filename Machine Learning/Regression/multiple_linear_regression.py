@@ -4,7 +4,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from linear_model import backwardElimination
+from Utils.ml_utils import backwardElimination
 
 # Importing the dataset
 dataset = pd.read_csv('datasets/50_Startups.csv')
