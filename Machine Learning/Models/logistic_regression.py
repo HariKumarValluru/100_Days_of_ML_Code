@@ -30,4 +30,7 @@ class LogisticRegression:
                 pass
         
         return
-        
+    
+    def predict(self, X):
+        y_hat = self.sigmoid(X.dot(self.params))
+        return y_hat
