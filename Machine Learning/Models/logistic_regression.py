@@ -4,6 +4,12 @@ from Utils.activation_functions import Sigmoid
 from Utils.ml_utils import make_diagonal
 
 class LogisticRegression:
+    """ Logistic Regression classifier.
+    Parameters:
+    -----------
+    learning_rate: float
+    gradient_descent: boolean
+    """
     def __init__(self, learning_rate=0.001, gradient_descent=True):
         self.learning_rate = learning_rate
         self.gradient_descent = gradient_descent
