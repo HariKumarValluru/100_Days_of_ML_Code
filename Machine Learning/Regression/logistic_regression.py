@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from linear_model.ml_utils import accuracy_score
-from linear_model.utils.plotting import Plot
 
 ad_data = pd.read_csv("datasets/advertising.csv")
 
