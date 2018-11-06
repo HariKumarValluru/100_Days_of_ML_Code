@@ -82,22 +82,21 @@ def gradient_descent(X, Y, B, alpha, iterations):
         
     return B, cost_history
 
-# Model Evaluation - RMSE (Root Mean Square Error)
 def rmse(Y, Y_pred):
+    """Model Evaluation - RMSE (Root Mean Square Error)"""
     rmse = np.sqrt(sum((Y - Y_pred) ** 2) / len(Y))
     return rmse
 
-# Model Evaluation - R2 Score
 def r2_score(Y, Y_pred):
+    """"Model Evaluation - R2 Score"""
     mean_y = np.mean(Y)
     ss_tot = sum((Y - mean_y) ** 2)
     ss_res = sum((Y - Y_pred) ** 2)
     r2 = 1 - (ss_res / ss_tot)
     return r2
 
-# Covariance between two vectors
 def cov_matrix(_y, _x):
-    
+    """Covariance between two vectors"""    
     if _x.shape[0] != _y.shape[0]:
         raise Exception("Shapes do not match")
 
@@ -133,7 +132,10 @@ def accuracy_score(y_true, y_pred):
     return accuracy
 
 def normalize(X, axis=-1, order=2):
-    """ Normalize the dataset X """
-    l2 = np.atleast_1d(np.linalg.norm(X, order, axis))
-    l2[l2 == 0] = 1
-    return X / np.expand_dims(l2, axis)
+    """ Scaling the dataset"""
+    nm = np.linalg.norm(X, order, axis)
+    # Convert inputs to arrays
+    ld = np.atleast_1d(nm)
+    ld[ld == 0] = 1
+    
+    return X / np.expand_dims(ld, axis)
