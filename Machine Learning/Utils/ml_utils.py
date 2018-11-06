@@ -133,9 +133,15 @@ def accuracy_score(y_true, y_pred):
 
 def normalize(X, axis=-1, order=2):
     """ Scaling the dataset"""
-    nm = np.linalg.norm(X, order, axis)
-    # Convert inputs to arrays
-    ld = np.atleast_1d(nm)
-    ld[ld == 0] = 1
-    
-    return X / np.expand_dims(ld, axis)
+    mu = X.mean(axis=0)
+    sigma = X.std(axis=0)
+    sigma[sigma == 0] = 1
+    X_norm = (X - mu) / sigma
+    return X_norm
+
+def make_diagonal(x):
+    """ Converts a vector into an diagonal matrix """
+    m = np.zeros((len(x), len(x)))
+    for i in range(len(m[0])):
+        m[i, i] = x[i]
+    return m
