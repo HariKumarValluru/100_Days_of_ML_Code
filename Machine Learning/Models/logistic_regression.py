@@ -10,9 +10,8 @@ class LogisticRegression:
     learning_rate: float
     gradient_descent: boolean
     """
-    def __init__(self, learning_rate=0.001, gradient_descent=True):
+    def __init__(self, learning_rate=0.001):
         self.learning_rate = learning_rate
-        self.gradient_descent = gradient_descent
         self.params = None
         self.sigmoid = Sigmoid()
         
@@ -23,16 +22,9 @@ class LogisticRegression:
         
         for i in range(iters):
             # using sigmoid activation function for making prediction
-            y_pred = self.sigmoid(X.dot(self.params))
-            if self.gradient_descent:
-                # gradient of the loss function
-                self.params -= self.learning_rate * - (y - y_pred).dot(X)
-            else:
-                # Make a diagonal matrix of the sigmoid gradient column vector
-                diag_gradient = make_diagonal(self.sigmoid.gradient(X.dot(self.params)))
-                # Batch opt:
-                self.param = np.linalg.pinv(X.T.dot(diag_gradient).dot(X)).dot(X.T).dot(diag_gradient.dot(X).dot(self.params) + y - y_pred)
-        
+            y_pred = self.sigmoid(X.dot(self.params))            
+            # gradient of the loss function
+            self.params -= self.learning_rate * - (y - y_pred).dot(X)
         return
     
     def predict(self, X):
