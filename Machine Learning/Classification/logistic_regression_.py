@@ -17,12 +17,12 @@ X = normalize(X)
 
 # Spliting the data into trainig and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, 
-                                                    random_state=42)
+                                                    random_state=101)
 
 # initializing the Model and fitting the training data
 from Models import LogisticRegression
 
-model = LogisticRegression(learning_rate=0.001)
+model = LogisticRegression()
 model.fit(X_train, y_train)
 
 # predicting the test data
