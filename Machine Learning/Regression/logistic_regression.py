@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from linear_model.ml_utils import accuracy_score
+from linear_model.utils.plotting import Plot
 
 ad_data = pd.read_csv("datasets/advertising.csv")
 
@@ -35,3 +37,7 @@ y_pred = model.predict(X_test)
 from sklearn.metrics import classification_report, confusion_matrix
 print(classification_report(y_test, y_pred))
 print(confusion_matrix(y_test, y_pred))
+
+accuracy = accuracy_score(y_test, y_pred)
+perc = 100 * accuracy
+print("Accuracy: {0:.2f}%".format(perc))

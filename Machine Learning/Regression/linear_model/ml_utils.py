@@ -126,3 +126,8 @@ def compute_b0_bn(ym, Xm):
     b0 = -x_mean * b1_bn + y_mean
     
     return (np.float(b0), np.array(b1_bn).flatten())
+
+def accuracy_score(y_true, y_pred):
+    """ Compare y_true to y_pred and return the accuracy """
+    accuracy = np.sum(y_true == y_pred, axis=0) / len(y_true)
+    return accuracy
