@@ -86,3 +86,9 @@
 **Today's Progress** : Implemented multiple linear regression without gradient descent and Implemented Logistic regression on advertsing data.
 
 **Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/8c6bd89bb2e246e9710ede78015bb7ba0409fb25)
+
+## Day 13 : Nov 6, 2018
+
+**Today's Progress:** Created logistic regression model from scratch and achieved 93.98% accuracy.
+
+**Link of Work:**   [Commit](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/63bec1c49feaf79d3f2551525a99cc1f9947cee7)
