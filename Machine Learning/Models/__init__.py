@@ -1,3 +1,5 @@
 from .linear_regression import LinearRegression
-__all__ = ['LinearRegression'
+from .logistic_regression import LogisticRegression
+__all__ = ['LinearRegression',
+           'LogisticRegression'
            ]
