@@ -23,7 +23,11 @@ class LogisticRegression:
         for i in range(iters):
             # using sigmoid activation function for making prediction
             y_pred = self.sigmoid(X.dot(self.params))
-            
+            if self.gradient_descent:
+                # gradient of the loss function
+                self.params -= self.learning_rate * - (y - y_pred).dot(X)
+            else:
+                pass
         
-        return y_pred
+        return
         
