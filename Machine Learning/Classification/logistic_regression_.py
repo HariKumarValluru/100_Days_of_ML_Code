@@ -16,14 +16,18 @@ y = ad_data.iloc[:, -1].values
 X = normalize(X)
 
 # Spliting the data into trainig and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, 
-                                                    random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, 
+                                                    random_state=42)
 
 # initializing the Model and fitting the training data
 from Models import LogisticRegression
 
-model = LogisticRegression()
+model = LogisticRegression(learning_rate=0.001)
 model.fit(X_train, y_train)
 
 # predicting the test data
-model.predict(X_test)
+y_pred = model.predict(X_test)
+
+from Utils.ml_utils import accuracy_score
+accuracy = accuracy_score(y_test, y_pred) *100
+print("Accuracy: {:.2f}%".format(accuracy))

@@ -15,7 +15,7 @@ class LogisticRegression:
         self.params = None
         self.sigmoid = Sigmoid()
         
-    def fit(self, X, y, iters =1000):
+    def fit(self, X, y, iters =10000):
         n_features = X.shape[1]
         limit = 1 / np.sqrt(n_features)
         self.params = np.random.uniform(-limit, limit, (n_features))
@@ -32,5 +32,5 @@ class LogisticRegression:
         return
     
     def predict(self, X):
-        y_hat = self.sigmoid(X.dot(self.params))
-        return y_hat
+        y_pred =  np.round(self.sigmoid(X.dot(self.params))).astype(int)
+        return y_pred
