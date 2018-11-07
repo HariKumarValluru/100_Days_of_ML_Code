@@ -43,3 +43,10 @@ for i in range(1,50):
     y_pred_i = model.predict(X_test)
     
     erro_rate.append(np.mean(y_pred_i != y_test))
+
+# Visualising the error rate vs k values
+plt.plot(range(1,50), erro_rate, color = 'blue', marker='o', markerfacecolor="red",
+         markersize=10)
+plt.title("Error Rate vs K value")
+plt.xlabel("K")
+plt.ylabel("Error Rate")
