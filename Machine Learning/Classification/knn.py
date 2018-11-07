@@ -20,3 +20,15 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
+
+# Fitting the model to trainning set
+from sklearn.neighbors import KNeighborsClassifier
+model = KNeighborsClassifier(n_neighbors=5)
+model.fit(X_train, y_train)
+
+# predicting the test set
+y_pred = model.predict(X_test)
+
+from sklearn.metrics import classification_report, confusion_matrix
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))
