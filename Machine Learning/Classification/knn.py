@@ -32,3 +32,14 @@ y_pred = model.predict(X_test)
 from sklearn.metrics import classification_report, confusion_matrix
 print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))
+
+# tracking the error rate
+erro_rate = []
+for i in range(1,50):
+    model = KNeighborsClassifier(n_neighbors=i)
+    model.fit(X_train, y_train)
+    
+    # predicting the test set
+    y_pred_i = model.predict(X_test)
+    
+    erro_rate.append(np.mean(y_pred_i != y_test))
