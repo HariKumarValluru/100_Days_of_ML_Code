@@ -164,3 +164,11 @@ def standardize(X):
         if std[col]:
             X_std[:, col] = (X_std[:, col] - mean[col]) / std[col]
     return X_std
+
+def euclidean_distance(x1, x2):
+    """ Calculate euclidean distance between two points """
+    distance = 0
+    # Squared distance between each coordinate
+    for i in range(len(x1)):
+        distance += np.square((x1[i] - x2[i]))
+    return np.sqrt(distance)
