@@ -148,4 +148,10 @@ def make_diagonal(x):
 
 def standardize(X):
     """ Standardize the dataset X """
-    pass
+    X_std = X
+    mean = X.mean(axis=0)
+    std = X.std(axis=0)
+    for col in range(np.shape(X)[1]):
+        if std[col]:
+            X_std[:, col] = (X_std[:, col] - mean[col]) / std[col]
+    return X_std
