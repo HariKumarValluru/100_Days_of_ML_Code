@@ -22,7 +22,7 @@ X_test = standardize(X_test)
 
 # Fitting the model to trainning set
 from sklearn.neighbors import KNeighborsClassifier
-model = KNeighborsClassifier(n_neighbors=20)
+model = KNeighborsClassifier(n_neighbors=21, p=2)
 model.fit(X_train, y_train)
 
 # predicting the test set
@@ -49,3 +49,13 @@ plt.plot(range(1,50), erro_rate, color = 'blue', marker='o', markerfacecolor="re
 plt.title("Error Rate vs K value")
 plt.xlabel("K")
 plt.ylabel("Error Rate")
+
+
+from Utils.ml_utils import accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
+
+print ("Accuracy:", accuracy)
+
+#Reduce dimensions to 2d using pca and plot the results
+from Utils.plotting import Plot
+Plot().plot_in_2d(X_test, y_pred, title="K Nearest Neighbors", accuracy=accuracy)

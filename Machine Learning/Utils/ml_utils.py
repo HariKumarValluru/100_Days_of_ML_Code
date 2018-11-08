@@ -46,6 +46,15 @@ def correlation_matrix(X, Y=None):
 
     return np.array(correlation_matrix, dtype=float)
 
+def covariance_matrix(X, Y=None):
+    """ Calculate the covariance matrix for the dataset X """
+    if Y is None:
+        Y = X
+    n_samples = np.shape(X)[0]
+    covariance_matrix = (1 / (n_samples-1)) * (X - X.mean(axis=0)).T.dot(Y - Y.mean(axis=0))
+
+    return np.array(covariance_matrix, dtype=float)
+
 def std_dev(X):
     """ Calculate the standard deviations of the features in dataset X """
     std_dev = np.sqrt(variance(X))
