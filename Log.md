@@ -101,6 +101,6 @@
 
 ## Day 15 : Nov 8, 2018
 
-**Today's Progress:** Created K Nearest Neighbor model and visualising the error rate.
+**Today's Progress:** Created K Nearest Neighbor model from scratch and visualising the error rate.
 
 **Link of Work:**   [K Nearest Neighbors without scikit learn](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/29911955932bad16f8b8378c5aa7d920feeb7f5d)
