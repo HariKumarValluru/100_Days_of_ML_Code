@@ -4,14 +4,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # loading the dataset
-dataset = pd.read_csv("Datasets/Social_Network_Ads.csv")
+dataset = pd.read_csv("Datasets/KNN_Project_Data.csv")
 
 X = dataset.iloc[:, 2:4].values
 y = dataset.iloc[:, -1].values
 
 # splitting the dataset in to training and test sets
 from Utils.ml_utils import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, 
                                                     random_state=101)
 
 # Feature Scaling
@@ -21,7 +21,7 @@ X_test = standardize(X_test)
 
 # Fitting the model to trainning set
 from Models.neighbors import KNN
-model = KNN(n_neighbors=1)
+model = KNN(n_neighbors=46)
 model.fit(X_train, y_train)
 
 # predicting the test set
@@ -49,3 +49,11 @@ plt.title("Error Rate vs K value")
 plt.xlabel("K")
 plt.ylabel("Error Rate")
 
+from Utils.ml_utils import accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
+
+print ("Accuracy:", accuracy)
+
+#Reduce dimensions to 2d using pca and plot the results
+from Utils.plotting import Plot
+Plot().plot_in_2d(X_test, y_pred, title="K Nearest Neighbors", accuracy=accuracy)

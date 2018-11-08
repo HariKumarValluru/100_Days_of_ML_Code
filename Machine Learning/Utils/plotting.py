@@ -7,7 +7,7 @@ from Utils.ml_utils import covariance_matrix
 class Plot():
     
     def __init__(self):
-        self.cmap = plt.get_cmap('prism_r')
+        self.cmap = plt.get_cmap('viridis')
         
     def _transform(self, X, dim):
         covariance = covariance_matrix(X)
