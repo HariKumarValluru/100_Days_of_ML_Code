@@ -145,3 +145,7 @@ def make_diagonal(x):
     for i in range(len(m[0])):
         m[i, i] = x[i]
     return m
+
+def standardize(X):
+    """ Standardize the dataset X """
+    pass
