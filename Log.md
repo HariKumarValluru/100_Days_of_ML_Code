@@ -97,4 +97,10 @@
 
 **Today's Progress:** Implemented K Nearest Neighbor model and visualising the error rate.
 
-**Link of Work:**   [K Nearest Neighbor](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/41212acd70d10b19aba1d4590389cd64e9d493ca)
+**Link of Work:**   [K Nearest Neighbors](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/41212acd70d10b19aba1d4590389cd64e9d493ca)
+
+## Day 15 : Nov 8, 2018
+
+**Today's Progress:** Created K Nearest Neighbor model and visualising the error rate.
+
+**Link of Work:**   [K Nearest Neighbors without scikit learn](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/29911955932bad16f8b8378c5aa7d920feeb7f5d)
