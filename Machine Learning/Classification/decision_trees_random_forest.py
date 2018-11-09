@@ -30,3 +30,20 @@ sns.jointplot('fico', 'int.rate', data=loans)
 
 sns.lmplot('fico', 'int.rate', data=loans, hue='credit.policy', col='not.fully.paid',
            palette='Set1')
+
+# Creating new feature columns with dummy variables
+cat_feats = ['purpose']
+final_data = pd.get_dummies(loans, columns=cat_feats, drop_first=True)
+
+X = final_data.drop('not.fully.paid', axis=1).iloc[:].values
+y = final_data.iloc[:, 12].values
+
+# Splitting the dataset into training and test set
+from Utils.ml_utils import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, 
+                                                        random_state=101)
+
+# Training a Decision Tree Model
+from sklearn.tree import DecisionTreeClassifier
+dtree = DecisionTreeClassifier()
+dtree.fit(X_train, y_train)
