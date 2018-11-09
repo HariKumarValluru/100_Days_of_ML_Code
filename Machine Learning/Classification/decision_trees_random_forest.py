@@ -54,3 +54,13 @@ d_pred = dtree.predict(X_test)
 from sklearn.metrics import confusion_matrix, classification_report
 print(confusion_matrix(y_test, d_pred))
 print(classification_report(y_test, d_pred))
+
+# Training a Random Forest
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier(n_estimators=300)
+rf.fit(X_train, y_train)
+
+rf_pred = rf.predict(X_test)
+
+print(confusion_matrix(y_test, rf_pred))
+print(classification_report(y_test, rf_pred))
