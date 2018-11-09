@@ -104,3 +104,11 @@
 **Today's Progress:** Created K Nearest Neighbor model from scratch and visualising the error rate.
 
 **Link of Work:**   [K Nearest Neighbors without scikit learn](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/29911955932bad16f8b8378c5aa7d920feeb7f5d)
+
+## Day 16 : Nov 9, 2018
+
+**Today's Progress:** Implemented Decision Trees and Random Forest models on loan data for predicting whether or not the borrower paid back their loan in full.
+
+**Thoughts** : Decision trees are very efficient algorithm. If hyperparameters are not used properly there will be a chance of overfitting.
+
+**Link of Work:**   [Decision Trees and Random Forest](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c661657e729f8efbeea88900bd8f26f98cbf269b)
