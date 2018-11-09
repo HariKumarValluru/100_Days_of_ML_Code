@@ -172,3 +172,8 @@ def euclidean_distance(x1, x2):
     for i in range(len(x1)):
         distance += np.square((x1[i] - x2[i]))
     return np.sqrt(distance)
+
+def mean_squared_error(y_true, y_pred):
+    """ Calculating the mean squared error between y_true and y_pred """
+    mse = np.mean(np.power(y_true - y_pred, 2))
+    return mse
