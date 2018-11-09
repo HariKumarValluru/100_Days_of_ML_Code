@@ -47,3 +47,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3,
 from sklearn.tree import DecisionTreeClassifier
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train, y_train)
+
+d_pred = dtree.predict(X_test)
+
+
+from sklearn.metrics import confusion_matrix, classification_report
+print(confusion_matrix(y_test, d_pred))
+print(classification_report(y_test, d_pred))
