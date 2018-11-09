@@ -109,6 +109,6 @@
 
 **Today's Progress:** Implemented Decision Trees and Random Forest models on loan data for predicting whether or not the borrower paid back their loan in full.
 
-**Thoughts** : Decision trees are very efficient algorithm. If hyperparameters are not used properly there will be a chance of overfitting.
+**Thoughts:** Decision trees are very efficient algorithm. If hyperparameters are not used properly there will be a chance of overfitting.
 
 **Link of Work:**   [Decision Trees and Random Forest](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c661657e729f8efbeea88900bd8f26f98cbf269b)
