@@ -46,6 +46,15 @@ def correlation_matrix(X, Y=None):
 
     return np.array(correlation_matrix, dtype=float)
 
+def covariance_matrix(X, Y=None):
+    """ Calculate the covariance matrix for the dataset X """
+    if Y is None:
+        Y = X
+    n_samples = np.shape(X)[0]
+    covariance_matrix = (1 / (n_samples-1)) * (X - X.mean(axis=0)).T.dot(Y - Y.mean(axis=0))
+
+    return np.array(covariance_matrix, dtype=float)
+
 def std_dev(X):
     """ Calculate the standard deviations of the features in dataset X """
     std_dev = np.sqrt(variance(X))
@@ -145,3 +154,21 @@ def make_diagonal(x):
     for i in range(len(m[0])):
         m[i, i] = x[i]
     return m
+
+def standardize(X):
+    """ Standardize the dataset X """
+    X_std = X
+    mean = X.mean(axis=0)
+    std = X.std(axis=0)
+    for col in range(np.shape(X)[1]):
+        if std[col]:
+            X_std[:, col] = (X_std[:, col] - mean[col]) / std[col]
+    return X_std
+
+def euclidean_distance(x1, x2):
+    """ Calculate euclidean distance between two points """
+    distance = 0
+    # Squared distance between each coordinate
+    for i in range(len(x1)):
+        distance += np.square((x1[i] - x2[i]))
+    return np.sqrt(distance)
