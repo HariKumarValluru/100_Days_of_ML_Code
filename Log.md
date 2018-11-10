@@ -112,3 +112,11 @@
 **Thoughts:** Decision trees are very efficient algorithm. If hyperparameters are not used properly there will be a chance of overfitting.
 
 **Link of Work:**   [Decision Trees and Random Forest](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c661657e729f8efbeea88900bd8f26f98cbf269b)
+
+## Day 17 : Nov 10, 2018
+
+**Today's Progress:** Jumped To Brush up Linear Algebra. Started off by completing 4 videos which gave a complete overview of Vectors, Linear Combinations, Spans, Basis Vectors, Linear Transformations and Matrix Multiplication.
+
+**Thoughts:** Having a good concept building in Maths is very important in Machine Learning.
+
+**Link to the playlist:**   [Linear Algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
