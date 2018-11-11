@@ -120,3 +120,11 @@
 **Thoughts:** Having a good concept building in Maths is very important in Machine Learning.
 
 **Link to the playlist:**   [Linear Algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+
+## Day 18 : Nov 11, 2018
+
+**Today's Progress:** Continuing with Linear Algebra. Completed 3D Transformations, Determinants, Inverse Matrix, Column Space, Null Space and Non-Square Matrices topics.
+
+**Thoughts:** Having a good concept building in Maths is very important in Machine Learning.
+
+**Link to the playlist:**   [Linear Algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
