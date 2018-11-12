@@ -128,3 +128,9 @@
 **Thoughts:** Having a good concept building in Maths is very important in Machine Learning.
 
 **Link to the playlist:**   [Linear Algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+
+## Day 19 : Nov 12, 2018
+
+**Today's Progress:** Completed the whole playlist today and started SVM (Support Vector Machine).
+
+**Link to the playlist:**   [Linear Algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
