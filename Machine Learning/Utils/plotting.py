@@ -65,3 +65,10 @@ class Plot():
         xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
                              np.arange(y_min, y_max, h))
         return xx, yy
+    
+    def plot_contours(ax, clf, xx, yy, **params):
+        """Plot the decision boundaries for a classifier."""
+        Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
+        Z = Z.reshape(xx.shape)
+        out = ax.contourf(xx, yy, Z, **params)
+        return out
