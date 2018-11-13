@@ -34,4 +34,14 @@ from sklearn.metrics import classification_report, confusion_matrix
 print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 
+#%%
+# finding the right parameters
+from sklearn.grid_search import GridSearchCV
 
+params = {'C': [0.1,1,10,100,1000], 'gamma': [1,.1,.01,.001,.0001]}
+grid = GridSearchCV(SVC(), params, verbose=3)
+grid.fit(X_train, y_train)
+
+#%%
+# printing the best parameters
+grid.best_params_
