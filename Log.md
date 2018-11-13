@@ -134,3 +134,11 @@
 **Today's Progress:** Completed the whole playlist today and started SVM (Support Vector Machine).
 
 **Link to the playlist:**   [Linear Algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+
+## Day 20 : Nov 13, 2018
+
+**Today's Progress:** Implemented SVM on iris and breast cancer datasets. Implemented Grid Search for finding the best parameters for SVM model. Also Signed up on Brilliant.org
+
+**Thoughts:** Brilliant.org is a cool website where we can improve problem solving skills.
+
+**Link to the playlist:**   [SVM](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/7001688982e4ecf69cabb324dc8781aaa6516307)
