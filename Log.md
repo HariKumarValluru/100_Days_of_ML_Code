@@ -141,4 +141,4 @@
 
 **Thoughts:** Brilliant.org is a cool website where we can improve problem solving skills.
 
-**Link to the playlist:**   [SVM](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/7001688982e4ecf69cabb324dc8781aaa6516307)
+**Link of Work:**   [SVM](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/7001688982e4ecf69cabb324dc8781aaa6516307)
