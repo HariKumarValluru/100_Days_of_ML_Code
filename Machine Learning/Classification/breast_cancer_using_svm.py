@@ -45,3 +45,8 @@ grid.fit(X_train, y_train)
 #%%
 # printing the best parameters
 grid.best_params_
+
+y_grid_pred = grid.predict(X_test)
+
+print(confusion_matrix(y_test, y_grid_pred))
+print(classification_report(y_test, y_grid_pred))
