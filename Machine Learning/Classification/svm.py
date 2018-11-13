@@ -67,7 +67,7 @@ X = iris.iloc[:, :-1].values
 y = iris.iloc[:, -1].values
 
 # splitting the dataset in to training and test sets
-from Utils.ml_utils import train_test_split
+from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, 
                                                     random_state=101)
 #%%
@@ -81,3 +81,19 @@ y_pred = model.predict(X_test)
 from sklearn.metrics import classification_report, confusion_matrix
 print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))
+#%%
+from sklearn.grid_search import GridSearchCV
+
+params = {'C': [0.1,1,10,100,1000], 'gamma': [1,.1,.01,.001,.0001]}
+grid = GridSearchCV(SVC(), params, verbose=3)
+grid.fit(X_train, y_train)
+#%%
+y_grid_pred = grid.predict(X_test)
+print(confusion_matrix(y_test, y_grid_pred))
+print(classification_report(y_test, y_grid_pred))
+#%%
+# finding the accuracy
+from Utils.ml_utils import accuracy_score
+
+accuracy = accuracy_score(y_test, y_grid_pred) *100
+print("Accuracy: {:.2f}%".format(accuracy))
