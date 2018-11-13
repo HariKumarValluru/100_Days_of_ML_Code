@@ -47,3 +47,37 @@ for clf, title, ax in zip(models, titles, sub.flatten()):
     ax.set_title(title)
 
 plt.show()
+
+#%%
+import pandas as pd
+import seaborn as sns
+
+iris = sns.load_dataset('iris')
+
+#%%
+sns.pairplot(iris, hue='species',  palette="Dark2")
+
+#%%
+setosa = iris[iris['species'] == 'setosa']
+sns.kdeplot(setosa['sepal_width'],setosa['sepal_length'],cmap='plasma', shade=True,
+            shade_lowest=False)
+
+#%%
+X = iris.iloc[:, :-1].values
+y = iris.iloc[:, -1].values
+
+# splitting the dataset in to training and test sets
+from Utils.ml_utils import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, 
+                                                    random_state=101)
+#%%
+from sklearn.svm import SVC
+model = SVC()
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+#%%
+from sklearn.metrics import classification_report, confusion_matrix
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))
