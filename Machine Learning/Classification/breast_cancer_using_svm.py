@@ -50,3 +50,10 @@ y_grid_pred = grid.predict(X_test)
 
 print(confusion_matrix(y_test, y_grid_pred))
 print(classification_report(y_test, y_grid_pred))
+
+#%%
+# finding the accuracy
+from Utils.ml_utils import accuracy_score
+
+accuracy = accuracy_score(y_test, y_grid_pred) *100
+print("Accuracy: {:.2f}%".format(accuracy))
