@@ -142,3 +142,9 @@
 **Thoughts:** Brilliant.org is a cool website where we can improve problem solving skills.
 
 **Link of Work:**   [SVM](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/7001688982e4ecf69cabb324dc8781aaa6516307)
+
+## Day 21 : Nov 14, 2018
+
+**Today's Progress:** Implemented custom SVM model on iris. Implemented k-means clustering on College data and Mall Customers dataset.
+
+**Link of Work:**   [K-means](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/1d7ad78b2b8cab99c395b36c2380c5714f52bf97)
