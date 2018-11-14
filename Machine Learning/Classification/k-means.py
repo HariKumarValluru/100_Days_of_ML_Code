@@ -38,6 +38,7 @@ print(classification_report(dataset['Cluster'], model.labels_))
 
 #%%
 mall_data = pd.read_csv('Datasets/Mall_Customers.csv')
+sns.pairplot(mall_data)
 X = mall_data.iloc[:, [3, 4]].values
 #%%
 wcss = []
