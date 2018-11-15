@@ -2,6 +2,9 @@
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style('darkgrid')
 
 column_names = ['user_id','item_id','rating','timestamp']
 
@@ -23,3 +26,6 @@ ratings = pd.DataFrame(dataset.groupby('title')['rating'].mean())
 
 # number of ratings
 ratings['num of ratings'] = dataset.groupby('title')['rating'].count()
+
+# visualising the num of ratings
+sns.distplot(ratings['num of ratings'], kde=False)
