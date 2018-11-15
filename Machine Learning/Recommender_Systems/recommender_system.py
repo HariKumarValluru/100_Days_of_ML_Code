@@ -38,3 +38,13 @@ sns.jointplot('rating','num of ratings', data=ratings, alpha=0.6)
 
 # creating a matrix with user_id as index & title as columns
 movie_mat = dataset.pivot_table(index='user_id', columns='title', values='rating')
+
+ratings.sort_values('num of ratings', ascending=False).head(10)
+
+# grabbing ratings for two movies
+starwars_user_ratings = movie_mat['Star Wars (1977)']
+liarliar_user_ratings = movie_mat['Liar Liar (1997)']
+
+# finding Correlation between movies
+similar_to_starwars = movie_mat.corrwith(starwars_user_ratings)
+similar_to_liarliar = movie_mat.corrwith(liarliar_user_ratings)
