@@ -48,3 +48,14 @@ liarliar_user_ratings = movie_mat['Liar Liar (1997)']
 # finding Correlation between movies
 similar_to_starwars = movie_mat.corrwith(starwars_user_ratings)
 similar_to_liarliar = movie_mat.corrwith(liarliar_user_ratings)
+
+#removing null values
+corr_starwars = pd.DataFrame(similar_to_starwars, columns=['Correlation'])
+corr_starwars.dropna(inplace=True)
+
+corr_liarliar= pd.DataFrame(similar_to_liarliar, columns=['Correlation'])
+corr_liarliar.dropna(inplace=True)
+
+# sorting
+corr_starwars.sort_values('Correlation', ascending=False).head(10)
+corr_liarliar.sort_values('Correlation', ascending=False).head(10)
