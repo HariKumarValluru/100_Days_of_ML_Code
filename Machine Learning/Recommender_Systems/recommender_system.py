@@ -29,3 +29,12 @@ ratings['num of ratings'] = dataset.groupby('title')['rating'].count()
 
 # visualising the num of ratings
 sns.distplot(ratings['num of ratings'], kde=False)
+
+# visualising the rating
+sns.distplot(ratings['rating'], kde=False, bins=70, hist_kws={"color": "g"})
+
+# relationship between avg. rating vs num of ratings
+sns.jointplot('rating','num of ratings', data=ratings, alpha=0.6)
+
+# creating a matrix with user_id as index & title as columns
+movie_mat = dataset.pivot_table(index='user_id', columns='title', values='rating')
