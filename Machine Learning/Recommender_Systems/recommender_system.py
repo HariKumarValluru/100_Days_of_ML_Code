@@ -59,3 +59,7 @@ corr_liarliar.dropna(inplace=True)
 # sorting
 corr_starwars.sort_values('Correlation', ascending=False).head(10)
 corr_liarliar.sort_values('Correlation', ascending=False).head(10)
+
+# adding num of ratings column to movies
+corr_starwars = corr_starwars.join(ratings['num of ratings'])
+corr_liarliar = corr_liarliar.join(ratings['num of ratings'])
