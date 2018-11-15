@@ -148,3 +148,11 @@
 **Today's Progress:** Implemented custom SVM model on iris. Implemented k-means clustering on College data and Mall Customers dataset.
 
 **Link of Work:**   [K-means](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/1d7ad78b2b8cab99c395b36c2380c5714f52bf97)
+
+## Day 22 : Nov 15, 2018
+
+**Today's Progress:** Built a Recommender System on movie lens dataset. It is a basic recommendation system by suggesting movies that are most similar to a particular movie.
+
+**Thoughts:**: It was really fun.
+
+**Link of Work:**   [Recommender Systems](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/71396862b78271bb6927e83767d9b167b836899a)
