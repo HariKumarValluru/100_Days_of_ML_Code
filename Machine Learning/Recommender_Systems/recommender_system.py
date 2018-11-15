@@ -63,3 +63,15 @@ corr_liarliar.sort_values('Correlation', ascending=False).head(10)
 # adding num of ratings column to movies
 corr_starwars = corr_starwars.join(ratings['num of ratings'])
 corr_liarliar = corr_liarliar.join(ratings['num of ratings'])
+
+# finding related movies
+corr_starwars[corr_starwars['num of ratings']].sort_values('Correlation',
+             ascending=False).head()
+corr_liarliar[corr_liarliar['num of ratings']].sort_values('Correlation',
+             ascending=False).head()
+
+#setting the threshold limit to 100
+corr_starwars[corr_starwars['num of ratings']>100].sort_values('Correlation',
+             ascending=False).head()
+corr_liarliar[corr_liarliar['num of ratings']>100].sort_values('Correlation',
+             ascending=False).head()
