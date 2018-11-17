@@ -167,7 +167,7 @@
 
 ## Day 24 : Nov 17, 2018
 
-**Today's Progress:**  I achieved Rank 248 on the Public Leaderboard in the hackathon AmExpert 2018 (Machine Learning Hackathon) 
+**Today's Progress:** I achieved Rank 248 on the Public Leaderboard in the hackathon AmExpert 2018 (Machine Learning Hackathon).
 
 **Thoughts:** The score have to be improved I will try my best on it and it is really fun.
 
