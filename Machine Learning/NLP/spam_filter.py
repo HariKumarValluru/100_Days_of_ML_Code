@@ -29,3 +29,14 @@ messages.groupby('label').describe()
 messages['length'] = messages['message'].apply(len)
 
 messages.head()
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+messages['length'].plot.hist(bins=70)
+
+messages['length'].describe()
+
+messages[messages['length'] == 910]['message'].iloc[0]
+
+messages.hist(column='length', by='label', bins=60, figsize=(12,5))
