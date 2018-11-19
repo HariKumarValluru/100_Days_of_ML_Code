@@ -156,3 +156,25 @@
 **Thoughts:** It was really fun.
 
 **Link of Work:**   [Recommender Systems](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/71396862b78271bb6927e83767d9b167b836899a)
+
+## Day 23 : Nov 16, 2018
+
+**Today's Progress:** Participating in Machine Learning Hackathon AmExpert 2018.
+
+**Thoughts:** This is my first Hackathon. It is really challenging and really fun.
+
+**Link of Work:**   [Machine Learning Hackathon](https://datahack.analyticsvidhya.com/user/profile/anilkumarvalluru)
+
+## Day 24 : Nov 17, 2018
+
+**Today's Progress:** I achieved Rank 248 on the Public Leaderboard in the hackathon AmExpert 2018 (Machine Learning Hackathon).
+
+**Thoughts:** The score have to be improved I will try my best on it and it is really fun.
+
+**Link of Work:**   [Machine Learning Hackathon](https://datahack.analyticsvidhya.com/user/profile/anilkumarvalluru)
+
+## Day 25 : Nov 18, 2018
+
+**Today's Progress:**  I achieved Rank 452 on the Public Leaderboard in the hackathon. Implemented Association Rule Learning on Market Basket dataset for optimising the sales in a grocery store by using apriori.
+
+**Link of Work:**   [Apriori](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/3d9ace41d78fb37fb1207d1f2fa3e9f65f254a2c)
