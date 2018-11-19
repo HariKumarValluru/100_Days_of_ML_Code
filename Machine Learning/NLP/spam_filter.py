@@ -82,4 +82,15 @@ print(bow4.shape)
 
 bow_transformer.get_feature_names()[9832]
     
-    
+messages_bow = bow_transformer.transform(messages['message'])
+
+# number of non zeros
+messages_bow.nnz
+
+from sklearn.feature_extraction.text import TfidfTransformer
+
+tfidf_transformer = TfidfTransformer().fit(messages_bow)
+
+tfidf4 = tfidf_transformer.transform(bow4)
+
+print(tfidf4)
