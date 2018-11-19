@@ -62,5 +62,24 @@ def txt_process(message):
             stopwords.words('english')]
     
 messages['message'].head(5).apply(txt_process)
+
+# implementing bag of words
+from sklearn.feature_extraction.text import CountVectorizer
+
+bow_transformer = CountVectorizer(analyzer=txt_process).fit(messages['message'])
+
+print(len(bow_transformer.vocabulary_))
+
+mess4 = messages['message'][3]
+
+print(mess4)
+
+bow4 = bow_transformer.transform([mess4])
+
+print(bow4)
+
+print(bow4.shape)
+
+bow_transformer.get_feature_names()[9832]
     
     
