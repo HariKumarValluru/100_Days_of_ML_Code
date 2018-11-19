@@ -178,3 +178,9 @@
 **Today's Progress:**  I achieved Rank 452 on the Public Leaderboard in the hackathon. Implemented Association Rule Learning on Market Basket dataset for optimising the sales in a grocery store by using apriori.
 
 **Link of Work:**   [Apriori](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/3d9ace41d78fb37fb1207d1f2fa3e9f65f254a2c)
+
+## Day 26 : Nov 19, 2018
+
+**Today's Progress:**  Building a prediction model that will accurately classify which texts are spam from SMS Spam Collection dataset by using NLP (Natural Language Processing).
+
+**Link of Work:**   [NLP](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/3d9ace41d78fb37fb1207d1f2fa3e9f65f254a2c)
