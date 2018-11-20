@@ -126,9 +126,13 @@ from sklearn.pipeline import Pipeline
 pipeline = Pipeline([
         ('bow', CountVectorizer(analyzer=txt_process)),
         ('tfidf', TfidfTransformer()),
-        ('classifier', MultinomialNB)
+        ('classifier', MultinomialNB())
         ])
     
-pipeline.fit(msg_train, label_train)
+pipeline.fit(msg_train,label_train)
 
-predictionsc = pipeline.predict(msg_test)
+predictions = pipeline.predict(msg_test)
+
+from sklearn.metrics import classification_report
+
+print(classification_report(label_test, predictions))
