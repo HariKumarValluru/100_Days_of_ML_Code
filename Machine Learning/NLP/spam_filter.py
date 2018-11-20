@@ -114,3 +114,21 @@ spam_detect_model.predict(tfidf4)[0]
 messages['label'][3]
 
 all_pred = spam_detect_model.predict(messages_tfidf)
+
+# splitting the messages to train and test sets
+from sklearn.model_selection import train_test_split
+
+msg_train, msg_test, label_train, label_test = train_test_split(
+        messages['message'], messages['label'], test_size=0.3)
+
+# creating a pipeline
+from sklearn.pipeline import Pipeline
+pipeline = Pipeline([
+        ('bow', CountVectorizer(analyzer=txt_process)),
+        ('tfidf', TfidfTransformer()),
+        ('classifier', MultinomialNB)
+        ])
+    
+pipeline.fit(msg_train, label_train)
+
+predictionsc = pipeline.predict(msg_test)
