@@ -69,3 +69,29 @@ predictions = rf.predict(X_test)
 from sklearn.metrics import classification_report, confusion_matrix
 print(confusion_matrix(y_test, predictions))
 print(classification_report(y_test, predictions))
+
+# text processing
+from sklearn.feature_extraction.text import TfidfTransformer
+
+from sklearn.pipeline import Pipeline
+
+pipeline = Pipeline([
+        ('bow', CountVectorizer()),
+        ('tfidf', TfidfTransformer()),
+        ('classifier', RandomForestClassifier())
+        ])
+
+# redoing the train and test split because we overwrote X with CountVecorizer
+
+X = yelp_class['text']
+y = yelp_class['stars']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, 
+                                                    random_state=101)
+
+pipeline.fit(X_train, y_train)
+
+y_pred = pipeline.predict(X_test)
+
+print(confusion_matrix(y_test, y_pred))
+print(classification_report(y_test, y_pred))
