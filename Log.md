@@ -184,3 +184,9 @@
 **Today's Progress:**  Building a prediction model that will accurately classify which texts are spam from SMS Spam Collection dataset by using NLP (Natural Language Processing).
 
 **Link of Work:**   [NLP](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/a3e99f206c58e1bcacefdca344e0b80b2fe79a32)
+
+## Day 27 : Nov 20, 2018
+
+**Today's Progress:**  Predicted texts are spam or not from SMS Spam Collection dataset. Worked on yelp reviews dataset from kaggle to classify reviews into 1 star or 5 star based on text content in the reviews by using NLP.
+
+**Link of Work:**   [NLP](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/9d664d1e71d7d916e626153bac873d24e44c8aea)
