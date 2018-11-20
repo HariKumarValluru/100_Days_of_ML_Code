@@ -94,3 +94,19 @@ tfidf_transformer = TfidfTransformer().fit(messages_bow)
 tfidf4 = tfidf_transformer.transform(bow4)
 
 print(tfidf4)
+
+# Sparsity
+sparsity = (100.0 * messages_bow.nnz / (messages_bow.shape[0] * messages_bow.shape[1]))
+
+print("Sparsity: {}".format(sparsity))
+
+# checking the document frequency of a word
+tfidf_transformer.idf_[bow_transformer.vocabulary_['university']]
+
+messages_tfidf = tfidf_transformer.transform(messages_bow)
+
+from sklearn.naive_bayes import MultinomialNB
+
+spam_detect_model = MultinomialNB().fit(messages_tfidf, messages['label'])
+
+spam_detect_model.predict(tfidf4)[0]
