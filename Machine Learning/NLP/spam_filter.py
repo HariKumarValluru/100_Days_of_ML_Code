@@ -110,3 +110,7 @@ from sklearn.naive_bayes import MultinomialNB
 spam_detect_model = MultinomialNB().fit(messages_tfidf, messages['label'])
 
 spam_detect_model.predict(tfidf4)[0]
+
+messages['label'][3]
+
+all_pred = spam_detect_model.predict(messages_tfidf)
