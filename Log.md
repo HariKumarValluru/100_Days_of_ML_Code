@@ -190,3 +190,11 @@
 **Today's Progress:**  Predicted texts are spam or not from SMS Spam Collection dataset. Worked on yelp reviews dataset from kaggle to classify reviews into 1 star or 5 star based on text content in the reviews by using NLP.
 
 **Link of Work:**   [NLP](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/9d664d1e71d7d916e626153bac873d24e44c8aea)
+
+## Day 28 : Nov 21, 2018
+
+**Today's Progress:**  Working on "Drug Reviews" dataset taken from uci to predict ratings based on the review of a drug by using NLP.
+
+**Link of Work:**   [NLP](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/637a15925feb746e80b216581a18ec4fde7afc74)
+
+**Link of Work:**   [NLP](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/9d664d1e71d7d916e626153bac873d24e44c8aea)
