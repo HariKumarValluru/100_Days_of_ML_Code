@@ -196,3 +196,11 @@
 **Today's Progress:**  Working on "Drug Reviews" dataset taken from uci to predict ratings based on the review of a drug by using NLP.
 
 **Link of Work:**   [NLP](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/637a15925feb746e80b216581a18ec4fde7afc74)
+
+## Day 28 : Nov 22, 2018
+
+**Today's Progress:** Started with the Artificial Neural network (ANN) and participating in the Intel Scene Classification Challenge currently, I am holding Rank 15 on the Public Leaderboard.
+
+**Thoughts:** ANN have been introduced in 1943, but still we haven't come to half of its successful development.
+
+**Link of Work:**  [Public Leaderboard](https://datahack.analyticsvidhya.com/contest/practice-problem-intel-scene-classification-challe/lb)
