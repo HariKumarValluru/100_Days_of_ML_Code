@@ -204,3 +204,11 @@
 **Thoughts:** ANN have been introduced in 1943, but still we haven't come to half of its successful development.
 
 **Link of Work:**  [Public Leaderboard](https://datahack.analyticsvidhya.com/contest/practice-problem-intel-scene-classification-challe/lb)
+
+## Day 30 : Nov 23, 2018
+
+**Today's Progress:** Built an Artificial Neural network (ANN) to predict which customers are leaving the bank.
+
+**Thoughts:** Deep learning is the most fascinating branch of machine learning and also the most powerful.
+
+**Link of Work:**  [ANN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/6ec4f15844479b6e45767cbbb455198385465078)
