@@ -212,3 +212,11 @@
 **Thoughts:** Deep learning is the most fascinating branch of machine learning and also the most powerful.
 
 **Link of Work:**  [ANN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/6ec4f15844479b6e45767cbbb455198385465078)
+
+## Day 31 : Nov 24, 2018
+
+**Today's Progress:** Learned about perceptrons, Logical computing with neurons.
+
+**Thoughts:** very good concepts.
+
+**Link of Work:**  [ANN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/258cf584e7b8558518cc79e3f900ce0de509a8a9)
