@@ -220,3 +220,11 @@
 **Thoughts:** very good concepts.
 
 **Link of Work:**  [ANN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/258cf584e7b8558518cc79e3f900ce0de509a8a9)
+
+## Day 32 : Nov 25, 2018
+
+**Today's Progress:** Learned about Convolutional Neural Network (CNN), BigData, Hadoop and Mapreduce. Implementing a convolutional neural network(CNN) on cats and dogs dataset to predict if the image is a dog or of a cat.
+
+**Thoughts:** Very good concepts.
+
+**Link of Work:**  [CNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f65324e9ba3282f8997cb8533d34a408396be8b0)
