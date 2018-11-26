@@ -228,3 +228,9 @@
 **Thoughts:** Very good concepts.
 
 **Link of Work:**  [CNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f65324e9ba3282f8997cb8533d34a408396be8b0)
+
+## Day 33 : Nov 26, 2018
+
+**Today's Progress:** Implemented a convolutional neural network(CNN) on cats and dogs dataset to predict if the image is a dog or of a cat and achieved 82.80% accuracy.
+
+**Link of Work:**  [CNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/8234a90695d90a0fc422f7a12a0ea62b39786be8)
