@@ -234,3 +234,11 @@
 **Today's Progress:** Implemented a convolutional neural network(CNN) on cats and dogs dataset to predict if the image is a dog or of a cat and achieved 82.80% accuracy.
 
 **Link of Work:**  [CNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/8234a90695d90a0fc422f7a12a0ea62b39786be8)
+
+## Day 34 : Nov 27, 2018
+
+**Today's Progress:** Learned tensorflow and classifying what number is written down with tensorflow.
+
+**Thoughts:** Tensorflow is a great toolkit.
+
+**Link of Work:**  [Tensorflow](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/b7b47a3ccd27098c62cd6492c36f82b83b40ef34)
