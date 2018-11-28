@@ -242,3 +242,9 @@
 **Thoughts:** Tensorflow is a great toolkit.
 
 **Link of Work:**  [Tensorflow](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/b7b47a3ccd27098c62cd6492c36f82b83b40ef34)
+
+## Day 35 : Nov 28, 2018
+
+**Today's Progress:** Learned about tensorflow estimators and implementing tensorflow on irisd dataset.
+
+**Link of Work:**  [Tensorflow](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/37bb16955520830fbb5b259d3968ee777c0550be)
