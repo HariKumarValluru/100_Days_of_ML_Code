@@ -34,4 +34,17 @@ classifier = tf.estimator.DNNClassifier(hidden_units = [10,20,10], n_classes=3,
 
 classifier.train(input_fn=input_func, steps=50)
 
-pred_fn = tf.estimator.inputs.pandas_input_fn(x=X_test, batch_size=len(X_test))
+pred_fn = tf.estimator.inputs.pandas_input_fn(x=X_test, batch_size=len(X_test), shuffle=False)
+
+predictions = list(classifier.predict(input_fn=pred_fn))
+
+final_preds = []
+
+for pred in predictions:
+    final_preds.append(pred['class_ids'][0])
+    
+# final preds
+from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
+print(confusion_matrix(y_test, final_preds))
+print(classification_report(y_test, final_preds))
+print(accuracy_score(y_test, final_preds))
