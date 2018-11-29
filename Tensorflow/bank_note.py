@@ -59,5 +59,13 @@ print(confusion_matrix(y_test, preds))
 print(classification_report(y_test, preds))
 print(accuracy_score(y_test, preds))
 
+# Comparing with the decision tree
+from sklearn.tree import DecisionTreeClassifier
+dtree = DecisionTreeClassifier()
+dtree.fit(X_train,y_train)
 
+d_preds = dtree.predict(X_test)
 
+print(confusion_matrix(y_test, d_preds))
+print(classification_report(y_test, d_preds))
+print(accuracy_score(y_test, d_preds))
