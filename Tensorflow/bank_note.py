@@ -53,5 +53,11 @@ note_predictions = list(classifier.predict(pred_fn))
 preds = []
 for pred in note_predictions:
     preds.append(pred['class_ids'][0])
-    
+
+from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
+print(confusion_matrix(y_test, preds))
+print(classification_report(y_test, preds))
+print(accuracy_score(y_test, preds))
+
+
 
