@@ -248,3 +248,9 @@
 **Today's Progress:** Learned about tensorflow estimators and implementing tensorflow on irisd dataset.
 
 **Link of Work:**  [Tensorflow](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/37bb16955520830fbb5b259d3968ee777c0550be)
+
+## Day 36 : Nov 29, 2018
+
+**Today's Progress:** Used Bank Authentication Data Set for classifying whether or not a Bank Note was authentic.
+
+**Link of Work:**  [Tensorflow](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/bbd6533d549b7d64e5ed49c074bc180ed3feed61)
