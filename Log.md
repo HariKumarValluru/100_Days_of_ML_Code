@@ -254,3 +254,11 @@
 **Today's Progress:** Used Bank Authentication Data Set for classifying whether or not a Bank Note was authentic.
 
 **Link of Work:**  [Tensorflow](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/bbd6533d549b7d64e5ed49c074bc180ed3feed61)
+
+## Day 37 : Nov 30, 2018
+
+**Today's Progress:** Learned about Recurrent Neural Networks (RNN).
+
+**Thoughts:** The arbitrary length brother of Convolutional Neural Networks.
+
+**Link of Work:**  [RNN](https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/)
