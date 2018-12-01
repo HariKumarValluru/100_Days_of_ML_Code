@@ -262,3 +262,11 @@
 **Thoughts:** The arbitrary length brother of Convolutional Neural Networks.
 
 **Link of Work:**  [RNN](https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/)
+
+## Day 38 : Dec 1, 2018
+
+**Today's Progress:** Learned about Long Short-Term Memory (LSTM).
+
+**Thoughts:** LSTM are useful for sequence and time series related problems.
+
+**Link of Work:**  [LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)
