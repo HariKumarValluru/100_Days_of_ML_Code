@@ -270,3 +270,11 @@
 **Thoughts:** LSTM are useful for sequence and time series related problems.
 
 **Link of Work:**  [LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)
+
+## Day 39 : Dec 2, 2018
+
+**Today's Progress:** Implementing Recurrent Neural Networks (RNN) for predicting the stock price of Google.
+
+**Thoughts:** It's actually impossible to predict exactly the future stock price. But it's actually possible to predict some trends.
+
+**Link of Work:**  [RNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/e51fd71b33e4810a4969e52cd078f91ae17238c0)
