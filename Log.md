@@ -278,3 +278,11 @@
 **Thoughts:** It's actually impossible to predict exactly the future stock price. But it's actually possible to predict some trends.
 
 **Link of Work:**  [RNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/e51fd71b33e4810a4969e52cd078f91ae17238c0)
+
+## Day 40 : Dec 3, 2018
+
+**Today's Progress:** Predicted the upward and downward trends on stock price of Google with RNN using LSTM.
+
+**Thoughts:** Time series forecasting is an important area of machine learning.
+
+**Link of Work:**  [RNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f25a4491f5e17212368499afa403416c3f38d78b)
