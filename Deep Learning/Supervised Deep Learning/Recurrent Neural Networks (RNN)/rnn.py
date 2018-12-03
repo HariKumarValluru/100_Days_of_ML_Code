@@ -64,6 +64,10 @@ regressor.fit(X_train, y_train, epochs=100, batch_size=32)
 
 regressor.save("google_stock_prediction.model")
 
+# uncomment this if there is any pretrained model
+# from keras.models import load_model
+# regressor = load_model("google_stock_prediction.model")
+
 # real stock price of January 2017
 dataset_test = pd.read_csv("Datasets/Google_Stock_Price_Test.csv")
 reals_stock_price = dataset_test.iloc[:, 1:2].values
