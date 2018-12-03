@@ -53,3 +53,11 @@ regressor.add(Dropout(0.2))
 
 # output layer
 regressor.add(Dense(1))
+
+# compiling
+regressor.compile(optimizer = 'adam', loss='mean_squared_error')
+
+regressor.summary()
+
+# fitting the train data
+regressor.fit(X_train, y_train, epochs=100, batch_size=32)
