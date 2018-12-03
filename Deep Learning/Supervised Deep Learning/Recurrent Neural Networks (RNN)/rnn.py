@@ -92,6 +92,10 @@ predicted_stock_price = regressor.predict(X_test)
 
 predicted_stock_price = sc.inverse_transform(predicted_stock_price)
 
+# evaluting the model
+from sklearn.metrics import mean_squared_error
+print("RMSE: {}".format(np.sqrt(mean_squared_error(reals_stock_price, predicted_stock_price))))
+
 # Visualising
 plt.figure(figsize=(14,8))
 # plotting the real stok price
