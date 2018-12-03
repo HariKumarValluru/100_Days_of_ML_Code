@@ -61,3 +61,15 @@ regressor.summary()
 
 # fitting the train data
 regressor.fit(X_train, y_train, epochs=100, batch_size=32)
+
+# real stock price of January 2017
+dataset_test = pd.read_csv("Datasets/Google_Stock_Price_Test.csv")
+reals_stock_price = dataset_test.iloc[:, 1:2].values
+
+# predicting the stock price of 2017
+dataset_total = pd.concat((dataset_train['open'], dataset_test['open']), axis=0)
+inputs = dataset_total[len(dataset_total) - len(dataset_test) - 60:].values
+
+# reshaping the inputs
+inputs = inputs.reshape(-1, 1)
+inputs = sc.transform(inputs)
