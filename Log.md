@@ -289,6 +289,6 @@
 
 ## Day 41 : Dec 4, 2018
 
-**Today's Progress:** Learning about Self Organizing Maps and burshed up K-means clustering algorithm.
+**Today's Progress:** Learning about Self Organizing Maps and brushed up K-means clustering algorithm.
 
 **Link of Work:**  [K-meas](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c3a5d90a86f633cf1064639f2aa155d5fb64940f)
