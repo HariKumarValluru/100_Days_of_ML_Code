@@ -23,3 +23,11 @@ from sklearn.cluster import AgglomerativeClustering
 hc = AgglomerativeClustering(n_clusters = 5, affinity = 'euclidean',
                              linkage = 'ward')
 y_hc = hc.fit_predict(X)
+
+# Visualising the clusters
+sns.set()
+plt.scatter(X[:, 0], X[:, 1], c=y_hc, s=100, cmap='viridis', edgecolors="black")
+plt.title('Clusters of customers')
+plt.xlabel('Annual Income (k$)')
+plt.ylabel('Spending Score (1-100)')
+plt.show()
