@@ -297,6 +297,6 @@
 
 **Today's Progress:** Implemented hierarchical clustering on mall customers dataset.
 
-**Thoughts:** Clustering comes under unsupervised learning method. Hierarchical clustering can’t handle big data well but K Means clustering can.
+**Thoughts:** Clustering comes under unsupervised learning method. Hierarchical clustering can't handle big data well but K Means clustering can.
 
 **Link of Work:**  [Hierarchical Clustering](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/3948d030a21254bcb3afe53504f0c2cb16886f61)
