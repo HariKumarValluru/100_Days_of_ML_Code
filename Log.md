@@ -292,3 +292,11 @@
 **Today's Progress:** Learning about Self Organizing Maps and brushed up K-means clustering algorithm.
 
 **Link of Work:**  [K-meas](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c3a5d90a86f633cf1064639f2aa155d5fb64940f)
+
+## Day 42 : Dec 5, 2018
+
+**Today's Progress:** Implemented hierarchical clustering on mall customers dataset.
+
+**Thoughts:** Clustering comes under unsupervised learning method. Hierarchical clustering can’t handle big data well but K Means clustering can.
+
+**Link of Work:**  [Hierarchical Clustering](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/3948d030a21254bcb3afe53504f0c2cb16886f61)
