@@ -300,3 +300,9 @@
 **Thoughts:** Clustering comes under unsupervised learning method. Hierarchical clustering can't handle big data well but K Means clustering can.
 
 **Link of Work:**  [Hierarchical Clustering](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/3948d030a21254bcb3afe53504f0c2cb16886f61)
+
+## Day 43 : Dec 6, 2018
+
+**Today's Progress:** Implementing the self organising maps (SOM) for detecting fraud in credit card applications. Statlog (Australian Credit Approval) Data Set is from UCI.
+
+**Link of Work:**  [SOM](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/2e974532219590b2c21557c064c36f1b96109fe8)
