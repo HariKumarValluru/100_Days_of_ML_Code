@@ -39,3 +39,8 @@ for i, x in enumerate(X):
          markersize = 10,
          markeredgewidth = 2)
 show()
+
+# finding the frauds
+mappings = som.win_map(X)
+frauds = np.concatenate((mappings[(3,7)], mappings[(3,8)]), axis=0)
+frauds = sc.inverse_transform(frauds)
