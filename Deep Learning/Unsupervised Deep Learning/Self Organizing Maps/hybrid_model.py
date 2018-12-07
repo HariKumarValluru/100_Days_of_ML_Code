@@ -54,3 +54,32 @@ is_fraud = np.zeros(customers.shape[0])
 for i in range(0, len(dataset)):
     if dataset.iloc[i, 0] in frauds:
         is_fraud[i] = 1
+        
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+customers = sc.fit_transform(customers)
+
+# ANN
+
+# Importing the Keras libraries and packages
+from keras.models import Sequential
+from keras.layers import Dense
+
+# Initialising the ANN
+classifier = Sequential()
+
+# Adding the input layer and the first hidden layer
+classifier.add(Dense(2, kernel_initializer = 'uniform', activation = 'relu',
+                     input_dim = 15))
+
+# Adding the output layer
+classifier.add(Dense(1, kernel_initializer = 'uniform', 
+                     activation = 'sigmoid'))
+
+# Compiling the ANN
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', 
+                   metrics = ['accuracy'])
+
+# Fitting the ANN to the Training set
+classifier.fit(customers, is_fraud, batch_size = 1, epochs = 5)
