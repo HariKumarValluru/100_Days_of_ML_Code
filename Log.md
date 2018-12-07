@@ -306,3 +306,9 @@
 **Today's Progress:** Implementing the self organising maps (SOM) for detecting fraud in credit card applications. Statlog (Australian Credit Approval) Data Set is from UCI.
 
 **Link of Work:**  [SOM](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/2e974532219590b2c21557c064c36f1b96109fe8)
+
+## Day 44 : Dec 7, 2018
+
+**Today's Progress:** Buliding a hybrid deep learning model composed of both unsupervised and supervised deep learning on Statlog (Australian Credit Approval) Data Set for detecting frauds.
+
+**Link of Work:**  [Hybrid Model](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c4b6aace1a59dfdf240a32d0cc5b191724382e4e)
