@@ -44,3 +44,13 @@ show()
 mappings = som.win_map(X)
 frauds = np.concatenate((mappings[(2,8)], mappings[(5,4)]), axis=0)
 frauds = sc.inverse_transform(frauds)
+
+# creating the matrix of features
+customers = dataset.iloc[:, 1:].values
+
+# creating the dependent variables
+is_fraud = np.zeros(customers.shape[0])
+
+for i in range(0, len(dataset)):
+    if dataset.iloc[i, 0] in frauds:
+        is_fraud[i] = 1
