@@ -1,56 +1,77 @@
 import numpy as np
 
-class LinearRegression():
+class LinearRegression:
     
     def __init__(self):
-        self.__a, self.__b = 0.0, 0.0
-    
+        """
+        Ordinary least squares Linear Regression.
+        """
+        self.mean_x = None
+        self.mean_y = None
+        self.b1 = None
+        self.intercept_ = None
+        
     def fit(self, x, y):
-        mean_x, mean_y = np.mean(x), np.mean(y)
-        r, sx, sy = self.corrcoeff(x, mean_x, y, mean_y)
-        Sx = np.sqrt(sx / (np.size(x) - 1))
-        Sy = np.sqrt(sy / (np.size(y) - 1))
-        self.__b = self.slope(r, Sy, Sx)
-        self.__a = self.intercept_(x, y, self.__b)
-        return
-    
-    # Calculate covariance xy
-    def covariance(self, x, mean_x, y, mean_y):
-        covar = 0.0
-        n = len(x)
-        for i in range(n):
-            covar += (x[i] - mean_x) * (y[i] - mean_y)
-        return covar
-    
-    # Calculate the variance of a list of numbers
-    def variance(self, values, mean):
-        return sum([(x - mean)**2 for x in values ])
-    
-    def corrcoeff(self, x, mean_x, y, mean_y):
-        covar = self.covariance(x, mean_x, y, mean_y)
+        """
+        Fit linear model.
+        Params:
+            X : array-like or sparse matrix, shape (n_samples, n_features) 
+                Training data
+            y : array_like, shape (n_samples, n_targets) Target values.
+        """
+        # calculate the mean value of our x and y variables
+        self.mean_x = np.mean(x)
+        self.mean_y = np.mean(y)
         
-        sx = self.variance(x, mean_x)
-        sy = self.variance(y, mean_y)
+        # Residuals of each x and y values from the means
+        res_x = x - self.mean_x
+        res_y = y - self.mean_y
         
-        corrcoeff = covar / np.sqrt(sx * sy)
+        # Multiplication of the x and y residuals
+        mul_res_xy = res_x * res_y
         
-        return corrcoeff, sx, sy
-    
-    def slope(self, r, Sy, Sx):
-        b = r * (Sy / Sx)
-        return b
-    
-    def intercept_(self, x, y, b):
-        mean_x, mean_y = np.mean(x), np.mean(y)
-        a = mean_y - (b * mean_x)
-        return a
+        # Summing the multiplied residuals
+        sum_mul_xy = sum(mul_res_xy)
+        
+        # squared differences of each x
+        sqrt_x = np.power(res_x, 2)
+        
+        # Summing the squared differences
+        sum_sqrt_x = sum(sqrt_x)
+        
+        self.b1 = self.slope(sum_mul_xy, sum_sqrt_x)
+        
+        self.intercept_ = self.intercept(self.mean_x, self.mean_y)
+        
+        return self
     
     def predict(self, x):
-        y_pred = []
-        b0, b1 = self.__a, self.__b
-        if np.size(x) > 1:
-            for i in x:
-                y_pred.append(b0 + (b1 * i))
-        else:
-            y_pred.append(b0 + (b1 * x))
-        return np.array(y_pred)
+        """
+        Predict using the linear model
+        Params:
+            x : array_like or sparse matrix, shape (n_samples, n_features) 
+                Samples.
+        Returns:
+            C : array, shape (n_samples,)
+                Returns predicted values.
+        """
+        return self.intercept_ + self.b1 * x
+        
+    def slope(self, x1, x2):
+        """
+        Estimating The Slope
+        Params:
+            x1: Sum of multiplied residuals of x and y.
+            x2: Sum of squared differences of x.
+        """
+        # calculate the value of slope
+        return x1 / x2
+    
+    def intercept(self, mean_x, mean_y):
+        """
+        Estimating The Intercept
+        Params:
+            mean_x: mean of array-like or sparse matrix.
+            mean_y: mean of array_like target values.
+        """    
+        return mean_y - self.b1 * mean_x
