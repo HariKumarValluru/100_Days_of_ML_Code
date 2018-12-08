@@ -312,3 +312,9 @@
 **Today's Progress:** Buliding a hybrid deep learning model composed of both unsupervised and supervised deep learning on Statlog (Australian Credit Approval) Data Set for detecting frauds.
 
 **Link of Work:**  [Hybrid Model](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c4b6aace1a59dfdf240a32d0cc5b191724382e4e)
+
+## Day 45 : Dec 8, 2018
+
+**Today's Progress:** Learning about Boltzmann Machine and Energy-based Models (EBMs).
+
+**Thoughts:** good concepts.
