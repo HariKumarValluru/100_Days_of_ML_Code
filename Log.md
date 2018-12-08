@@ -315,6 +315,8 @@
 
 ## Day 45 : Dec 8, 2018
 
-**Today's Progress:** Learning about Boltzmann Machine and Energy-based Models (EBMs).
+**Today's Progress:** Improved linear regression scratch model. Learning about Boltzmann Machine and Energy-based Models (EBMs).
 
 **Thoughts:** good concepts.
+
+**Link of Work:**  [Linear Regression Scratch](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/81e3d5e0bc401a4104f2ce5c787c9c10f8e3b0c2)
