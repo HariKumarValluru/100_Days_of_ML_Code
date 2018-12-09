@@ -320,3 +320,9 @@
 **Thoughts:** good concepts.
 
 **Link of Work:**  [Linear Regression Scratch](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/81e3d5e0bc401a4104f2ce5c787c9c10f8e3b0c2)
+
+## Day 46 : Dec 9, 2018
+
+**Today's Progress:** Continuing with Boltzmann Machine, Energy-based Models (EBMs), Restricted Boltzmann Machine and Contrastive Divergence.
+
+**Thoughts:** This is very very advanced stuff. Have to read more of it.
