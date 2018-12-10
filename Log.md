@@ -326,3 +326,9 @@
 **Today's Progress:** Continuing with Boltzmann Machine, Energy-based Models (EBMs), Restricted Boltzmann Machine and Contrastive Divergence.
 
 **Thoughts:** This is very very advanced stuff. Have to read more of it.
+
+## Day 47 : Dec 10, 2018
+
+**Today's Progress:** Installed pytorch and building a recommander system using restricted boltzmann machine on movie lens dataset.
+
+**Link of Work:** [Boltzmann Machine](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/28b466d0ae9913d9e75c4d9eed2ad98c2fe393f3)
