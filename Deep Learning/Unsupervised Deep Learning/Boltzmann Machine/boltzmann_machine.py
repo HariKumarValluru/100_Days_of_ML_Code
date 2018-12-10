@@ -20,3 +20,14 @@ users = pd.read_csv('Datasets/ml-1m/users.dat', sep='::', header=None,
 ratings = pd.read_csv('Datasets/ml-1m/ratings.dat', sep='::', header=None, 
                      engine='python', encoding='latin-1')
 
+# training and test set
+training_set = pd.read_csv('Datasets/ml-100k/u1.base', delimiter='\t')
+training_set = np.array(training_set, dtype="int")
+
+test_set = pd.read_csv('Datasets/ml-100k/u1.test', delimiter='\t')
+test_set = np.array(test_set, dtype="int")
+
+# total number of users
+tn_users = int(max(max(training_set[:,0]), max(test_set[:, 0])))
+# total number of movies
+tn_movies = int(max(max(training_set[:,1]), max(test_set[:, 1])))
