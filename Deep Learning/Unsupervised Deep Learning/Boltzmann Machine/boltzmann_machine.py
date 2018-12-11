@@ -60,3 +60,11 @@ test_set[test_set == 0] = -1
 test_set[test_set == 1] = 0
 test_set[test_set == 2] = 0
 test_set[test_set >= 3] = 1
+
+# creating the architecture of the neural network
+class RBM:
+    def __init__(self, num_of_visible_nodes, num_of_hidden_nodes):
+        # initialising the weights
+        self.W = torch.randn(num_of_visible_nodes, num_of_hidden_nodes)
+        self.a = torch.randn(1, num_of_hidden_nodes)
+        self.b = torch.randn(1, num_of_visible_nodes)
