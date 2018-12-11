@@ -332,3 +332,9 @@
 **Today's Progress:** Installed pytorch and building a recommander system using restricted boltzmann machine on movie lens dataset.
 
 **Link of Work:** [Boltzmann Machine](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/28b466d0ae9913d9e75c4d9eed2ad98c2fe393f3)
+
+## Day 48 : Dec 11, 2018
+
+**Today's Progress:** Converted training and test data into torch tensors and ratings into binary. Creating Restricted Boltzmann Machine from scratch.
+
+**Link of Work:** [Boltzmann Machine](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/d8ef07b8161f9695c66a7c9fcba7fcb2cc3d36a9)
