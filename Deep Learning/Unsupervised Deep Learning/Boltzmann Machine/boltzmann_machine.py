@@ -66,5 +66,17 @@ class RBM:
     def __init__(self, num_of_visible_nodes, num_of_hidden_nodes):
         # initialising the weights
         self.W = torch.randn(num_of_visible_nodes, num_of_hidden_nodes)
-        self.a = torch.randn(1, num_of_hidden_nodes)
+        self.a = torch.randn(1, num_of_hidden_nodes) # bias
         self.b = torch.randn(1, num_of_visible_nodes)
+        
+    def sample_h(self, x):
+        """ sampling the hidden nodes """
+        wx = torch.mm(x, self.W.t())
+        activation = wx + self.a.expand_as(wx)
+        # probability that the hidden node is activated given the value of the visible node
+        P = torch.sigmoid(activation)
+        return P, torch.bernoulli(P)
+    
+    
+        
+        
