@@ -338,3 +338,11 @@
 **Today's Progress:** Converted training and test data into torch tensors and ratings into binary. Creating Restricted Boltzmann Machine from scratch.
 
 **Link of Work:** [Boltzmann Machine](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/d8ef07b8161f9695c66a7c9fcba7fcb2cc3d36a9)
+
+## Day 49 : Dec 12, 2018
+
+**Today's Progress:** Created Restricted Boltzmann Machine from scratch. Trained and tested the model.
+
+**Thoughts:** Creating models from scratch gets more understanding.
+
+**Link of Work:** [Boltzmann Machine](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/8b195981415fa340adf9a89cab3e075559a1fe31)
