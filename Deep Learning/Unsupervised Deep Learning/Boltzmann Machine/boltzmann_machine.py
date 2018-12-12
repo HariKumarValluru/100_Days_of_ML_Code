@@ -98,3 +98,10 @@ class RBM:
         self.W += torch.mm(v0.t(), ph0) - torch.mm(vk.t() - phk)
         self.b += torch.sum((v0 - vk), 0)
         self.a += torch.sum((ph0 - phk), 0)
+        
+nv = len(training_set[0]) # number of visible nodes
+nh = 100 # number of hidden nodes
+batch_size = 100
+
+# initialising the model
+rbm = RBM(num_of_visible_nodes = nv, num_of_hidden_nodes = nh)
