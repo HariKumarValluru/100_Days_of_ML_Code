@@ -77,6 +77,12 @@ class RBM:
         P = torch.sigmoid(activation)
         return P, torch.bernoulli(P)
     
-    
-        
+    def sample_v(self, y):
+        """ sampling the visible nodes """
+        wy = torch.mm(y, self.W)
+        activation = wy + self.b.expand_as(wy)
+        # probability that the visible node is activated given the value of the hidden node
+        P = torch.sigmoid(activation)
+        return P, torch.bernoulli(P)
+
         
