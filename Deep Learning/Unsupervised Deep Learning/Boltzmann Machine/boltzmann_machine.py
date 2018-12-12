@@ -129,7 +129,19 @@ for epoch in range(1, nb_epochs + 1):
         rbm.train(v0, vk, ph0, phk)
         train_loss += torch.mean(torch.abs(v0[v0 >= 0] - vk[vk >= 0]))
         s += 1.
-    print("epoch: {} loss: {}".format(str(epoch)+"/"+str(nb_epochs), str(train_loss/s)))
+    print("epoch: {} loss: {}".format(str(epoch)+"/"+str(nb_epochs), str(train_loss.item()/s)))
             
+# Testing the  RBM
+test_loss = 0
+s = 0.
+for id_user in range(tn_users):
+    v = training_set[id_user:id_user+1]
+    vt = test_set[id_user:id_user+1]
+    if len(vt[vt>=0]) > 0:
+        _,h = rbm.sample_h(v)
+        _,v = rbm.sample_v(h)
+        test_loss += torch.mean(torch.abs(vt[vt>=0] - v[vt>=0]))
+        s += 1.
+print('test loss: {}'.format(str(test_loss.item()/s)))
             
         
