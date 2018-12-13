@@ -346,3 +346,9 @@
 **Thoughts:** Creating models from scratch gets more understanding.
 
 **Link of Work:** [Boltzmann Machine](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/8b195981415fa340adf9a89cab3e075559a1fe31)
+
+## Day 50 : Dec 13, 2018
+
+**Today's Progress:** Learning about Auto Encoders.
+
+**Thoughts:** Autoencoders are a very useful dimensionality reduction technique.
