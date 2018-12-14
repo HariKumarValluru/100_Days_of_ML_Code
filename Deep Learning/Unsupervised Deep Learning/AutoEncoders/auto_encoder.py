@@ -21,25 +21,31 @@ ratings = pd.read_csv('Datasets/ml-1m/ratings.dat', sep='::', header=None,
                      engine='python', encoding='latin-1')
 
 # loading training and test set
-training_set = pd.read_csv('Datasets/ml-100k/u1.base', delimiter='\t', header=None)
-test_set = pd.read_csv('Datasets/ml-100k/u1.test', delimiter='\t', header=None)
+training_set = pd.read_csv('Datasets/ml-100k/u1.base', delimiter = '\t')
+training_set = np.array(training_set, dtype = 'int')
+test_set = pd.read_csv('Datasets/ml-100k/u1.test', delimiter = '\t')
+test_set = np.array(test_set, dtype = 'int')
 
-# total number of users
-nb_users = int(max(training_set[0].nunique(), test_set[0].nunique()))
-# total number of movies
-nb_movies = int(max(training_set[1].nunique(), test_set[1].nunique()))
+# Getting the number of users and movies
+nb_users = int(max(max(training_set[:,0]), max(test_set[:,0])))
+nb_movies = int(max(max(training_set[:,1]), max(test_set[:,1])))
 
-# converting the data into a matrix with users in lines and movies in columns
-training_set = training_set.pivot_table(index=0, columns=1, values=2)
-test_set = test_set.pivot_table(index=0, columns=1, values=2)
-
-# fill the missing values
-training_set = training_set.fillna(0)
-test_set = test_set.fillna(0)
+# Converting the data into an array with users in lines and movies in columns
+def convert(data):
+    new_data = []
+    for id_users in range(1, nb_users + 1):
+        id_movies = data[:,1][data[:,0] == id_users]
+        id_ratings = data[:,2][data[:,0] == id_users]
+        ratings = np.zeros(nb_movies)
+        ratings[id_movies - 1] = id_ratings
+        new_data.append(list(ratings))
+    return new_data
+training_set = convert(training_set)
+test_set = convert(test_set)
 
 # converting the data into Torch tensors
-training_set = torch.FloatTensor(training_set.values)
-test_set = torch.FloatTensor(test_set.values)
+training_set = torch.FloatTensor(training_set)
+test_set = torch.FloatTensor(test_set)
 
 # Creating the architecture of the autoencoders
 class SAE(nn.Module):
@@ -68,7 +74,7 @@ criterion = nn.MSELoss()
 optimizer = optim.RMSprop(sae.parameters(), lr = 0.01, weight_decay=0.5)
 
 # Training the SAE
-nb_epochs = 200
+nb_epochs = 10
 for epoch in range(1, nb_epochs + 1):
     train_loss = 0
     s = 0.
