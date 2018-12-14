@@ -352,3 +352,9 @@
 **Today's Progress:** Learning about Auto Encoders.
 
 **Thoughts:** Autoencoders are a very useful dimensionality reduction technique.
+
+## Day 51 : Dec 14, 2018
+
+**Today's Progress:** Learned about Auto Encoders, Stacked and Deep Autoencoders. Implemented Autoenders from scratch and tested.
+
+**Link of Work:** [Autoencoders](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/4e03ac31bfd46f87936c63635731606a7301856d)
