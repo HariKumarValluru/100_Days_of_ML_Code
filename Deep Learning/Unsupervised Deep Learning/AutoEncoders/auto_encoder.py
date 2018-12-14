@@ -25,9 +25,9 @@ training_set = pd.read_csv('Datasets/ml-100k/u1.base', delimiter='\t', header=No
 test_set = pd.read_csv('Datasets/ml-100k/u1.test', delimiter='\t', header=None)
 
 # total number of users
-nb_users = int(max(training_set[0].max(), test_set[0].max()))
+nb_users = int(max(training_set[0].nunique(), test_set[0].nunique()))
 # total number of movies
-nb_movies = int(max(training_set[1].max(), test_set[1].max()))
+nb_movies = int(max(training_set[1].nunique(), test_set[1].nunique()))
 
 # converting the data into a matrix with users in lines and movies in columns
 training_set = training_set.pivot_table(index=0, columns=1, values=2)
@@ -51,7 +51,7 @@ class SAE(nn.Module):
         self.fc2 = nn.Linear(20, 10)
         # decoding layers
         self.fc3 = nn.Linear(10, 20)
-        self.fc3 = nn.Linear(20, nb_movies)
+        self.fc4 = nn.Linear(20, nb_movies)
         # activation function
         self.activation = nn.Sigmoid()
     
@@ -67,4 +67,23 @@ sae = SAE()
 criterion = nn.MSELoss()
 optimizer = optim.RMSprop(sae.parameters(), lr = 0.01, weight_decay=0.5)
 
-        
+# Training the SAE
+nb_epochs = 200
+for epoch in range(1, nb_epochs + 1):
+    train_loss = 0
+    s = 0.
+    for id_user in range(nb_users):
+        input = Variable(training_set[id_user]).unsqueeze(0)
+        target = input.clone()
+        if torch.sum(target.data > 0) > 0:
+            output = sae(input)
+            target.require_grad = False
+            output[target == 0] = 0
+            loss = criterion(output, target)
+            mean_corrector = nb_movies/float(torch.sum(target.data > 0) + 1e-10)
+            loss.backward()
+            train_loss += np.sqrt(loss.item()*mean_corrector)
+            s += 1.
+            optimizer.step()
+    print("epoch: {} loss: {}".format(str(epoch)+"/"+str(nb_epochs), str(train_loss.item()/s)))
+    
