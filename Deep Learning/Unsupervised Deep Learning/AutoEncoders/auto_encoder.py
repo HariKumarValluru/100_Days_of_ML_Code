@@ -44,7 +44,7 @@ test_set = torch.FloatTensor(test_set.values)
 # Creating the architecture of the autoencoders
 class SAE(nn.Module):
     """Stacked Auto Encoder"""
-    def __init__(self, ):
+    def __init__(self):
         super(SAE, self).__init__()
         # encoding layers
         self.fc1 = nn.Linear(nb_movies, 20)
@@ -62,5 +62,9 @@ class SAE(nn.Module):
         x = self.fc4(x)
         return x
 
-        
+# initialising the SAE
+sae = SAE()
+criterion = nn.MSELoss()
+optimizer = optim.RMSprop(sae.parameters(), lr = 0.01, weight_decay=0.5)
+
         
