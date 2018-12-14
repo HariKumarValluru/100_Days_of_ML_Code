@@ -55,3 +55,12 @@ class SAE(nn.Module):
         # activation function
         self.activation = nn.Sigmoid()
     
+    def forward(self, x):
+        x = self.activation(self.fc1(x))
+        x = self.activation(self.fc2(x))
+        x = self.activation(self.fc3(x))
+        x = self.fc4(x)
+        return x
+
+        
+        
