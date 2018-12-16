@@ -363,6 +363,14 @@
 
 **Today's Progress:** Participating in AnalyticsVidhya Genpact Machine Learning Hackathon.
 
-**Today's Progress:** Improved data analysis.
+**Thoughts:** Improved data analysis.
+
+**Link of Work:** [Hackathon](https://datahack.analyticsvidhya.com/contest/genpact-machine-learning-hackathon/lb)
+
+## Day 53 : Dec 16, 2018
+
+**Today's Progress:** Participating in AnalyticsVidhya Genpact Machine Learning Hackathon. Reduced RMSLE(Root of Mean Squared Logarithmic Error).
+
+**Thoughts:** It is really challenging and fun.
 
 **Link of Work:** [Hackathon](https://datahack.analyticsvidhya.com/contest/genpact-machine-learning-hackathon/lb)
