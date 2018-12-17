@@ -379,7 +379,7 @@
 
 **Today's Progress:** Read the famous paper Simple random search provides a competitive approach to reinforcement learning.
 
-**Thoughts:** Awesome paper, need to implementing this.
+**Thoughts:** Awesome paper, need to implement this.
 
 **Link of Work:** [Simple Random Search](https://arxiv.org/abs/1803.07055)
 
