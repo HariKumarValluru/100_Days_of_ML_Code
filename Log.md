@@ -374,3 +374,13 @@
 **Thoughts:** It is really challenging and fun.
 
 **Link of Work:** [Hackathon](https://datahack.analyticsvidhya.com/contest/genpact-machine-learning-hackathon/lb)
+
+## Day 54 : Dec 17, 2018
+
+**Today's Progress:** Read the famous paper Simple random search provides a competitive approach to reinforcement learning.
+
+**Thoughts:** Awesome paper, need to implementing this.
+
+**Link of Work:** [Simple Random Search](https://arxiv.org/abs/1803.07055)
+
+**Sample Video:** [Google Deepmind AI](https://www.youtube.com/watch?v=gn4nRCC9TwQ)
