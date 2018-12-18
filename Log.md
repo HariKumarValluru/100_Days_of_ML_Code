@@ -384,3 +384,9 @@
 **Link of Work:** [Simple Random Search](https://arxiv.org/abs/1803.07055)
 
 **Sample Video:** [Google Deepmind AI](https://www.youtube.com/watch?v=gn4nRCC9TwQ)
+
+## Day 55 : Dec 18, 2018
+
+**Today's Progress:** Created a CNN model for Multi-label classification on fashion dataset.
+
+**Link of Work:** [CNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/0eb68b29d4ac783c39011ccd23b44e7b3ce9b773)
