@@ -390,3 +390,9 @@
 **Today's Progress:** Created a CNN model for Multi-label classification on fashion dataset.
 
 **Link of Work:** [CNN](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/0eb68b29d4ac783c39011ccd23b44e7b3ce9b773)
+
+## Day 56 : Dec 19, 2018
+
+**Today's Progress:** Implemented face detection through webcam using Haar cascades.
+
+**Link of Work:** [Face Detection](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ac4cb6fd0554908af333706432ab76e0ec55495b)
