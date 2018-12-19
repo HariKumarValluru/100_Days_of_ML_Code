@@ -7,10 +7,24 @@ import cv2
 face_cascade = cv2.CascadeClassifier('cascades/haarcascade_frontalface_default.xml')
 # eye_cascade = cv2.CascadeClassifier('cascades/haarcascade_eye.xml')
 
-border_color = [255, 255, 255]
+border_color = (255, 255, 255)
 
-def draw_boundary(frame, x, y, w, h):
-    pass
+def draw_boundary(frame, x, y, w, h, border_color):
+    # Top left border
+    cv2.line(frame, (x, y), (x + (w//5), y), border_color, 2)
+    cv2.line(frame, (x, y), (x, y+(h//5)), border_color, 2)
+
+    # Top right border
+    cv2.line(frame, (x+((w//5)*4), y), (x+w, y), border_color, 2)
+    cv2.line(frame, (x+w, y), (x+w, y+(h//5)), border_color, 2)
+
+    # Bottom left border
+    cv2.line(frame, (x, (y+(h//5*4))), (x, y+h), border_color, 2)
+    cv2.line(frame, (x, (y+h)), (x + (w//5), y+h), border_color, 2)
+
+    # Bottom right border
+    cv2.line(frame, (x+((w//5)*4), y+h), (x + w, y + h), border_color, 2)
+    cv2.line(frame, (x+w, (y+(h//5*4))), (x+w, y+h), border_color, 2)
 
 def detect(frame):
     
@@ -22,3 +36,7 @@ def detect(frame):
     
     for x, y, w, h in faces:
         draw_boundary(frame, x, y, w, h, border_color)
+        
+    return frame
+        
+        
