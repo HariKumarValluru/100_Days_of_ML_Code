@@ -33,7 +33,7 @@ def detect(frame, net, transform):
     height, width = frame.shape[:2]
     frame_t = transform(frame)[0]
     x = torch.from_numpy(frame_t).permute(2, 0, 1)
-    Variable(x.unsqueeze(0))  
+    x = Variable(x.unsqueeze(0))  
     y = net(x)
     detections = y.data
     scale = torch.Tensor([width, height, width, height])
@@ -53,3 +53,26 @@ def detect(frame, net, transform):
             
     return frame
             
+# creating SSD neural network
+net = build_ssd('test')
+# downloaded pre loaded weights from https://s3.amazonaws.com/amdegroot-models/ssd300_mAP_77.43_v2.pth
+net.load_state_dict(torch.load("ssd300_mAP_77.43_v2.pth", 
+                               map_location = lambda storage,
+                               loc: storage))
+
+# creating the transformation
+transform = BaseTransform(net.size, (104/256.0, 117/256.0, 123/256.0))
+
+# reading the video
+reader = imageio.get_reader('videos/funny_dog.mp4')
+fps = reader.get_meta_data()['fps']
+# saving the video
+writer = imageio.get_writer('videos/output.mp4', fps=fps)
+
+for i, frame in enumerate(reader):
+    frame = detect(frame, net.eval(), transform)
+    writer.append_data(frame)
+    print(i)
+
+writer.close()
+
