@@ -9,5 +9,10 @@ from ssd import build_ssd
 import imageio
 
 def detect(frame, net, transform):
+    # getting width and height of the frame
+    height, width = frame.shape[:2]
+    frame_t = transform(frame)[0]
+    x = torch.from_numpy(frame_t).permute(2, 0, 1)
+    Variable(x.unsqueeze(0))  
     
     return frame
