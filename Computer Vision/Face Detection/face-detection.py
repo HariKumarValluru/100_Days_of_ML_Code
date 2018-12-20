@@ -38,8 +38,12 @@ def detect(frame):
         
     return frame
         
-# Creating a video object for capturing the video
-cap = cv2.VideoCapture(0)
+# Creating a video object for capturing the video from webcam
+# cap = cv2.VideoCapture(0)
+# Creating a video object for capturing the video from file
+cap = cv2.VideoCapture("videos/avengers.mp4")
+# getting number of frames
+fps = cap.get(cv2.CAP_PROP_FPS)
 
 # Check if camera opened successfully
 if (cap.isOpened() == False):
