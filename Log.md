@@ -396,3 +396,9 @@
 **Today's Progress:** Implemented face detection through webcam using Haar cascades.
 
 **Link of Work:** [Face Detection](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ac4cb6fd0554908af333706432ab76e0ec55495b)
+
+## Day 57 : Dec 20, 2018
+
+**Today's Progress:** Implemented object detection on a video file using SSD (Single Shot MultiBox Object Detector) with pytorch.
+
+**Link of Work:** [Object Detection](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/bd14468ece33bcfaa4b6b74ae580c1c9f6c094f7)
