@@ -408,3 +408,9 @@
 **Today's Progress:** Learning about Generative Adversarial Networks (GANs).
 
 **Link:** [GAN](https://www.analyticsvidhya.com/blog/2017/06/introductory-generative-adversarial-networks-gans/)
+
+## Day 59 : Dec 22, 2018
+
+**Today's Progress:** Directing customers to subscription through app behaviour analysis.
+
+**Link:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f6117778433a12b7bb6f9f77497ef91642bde977)
