@@ -413,4 +413,4 @@
 
 **Today's Progress:** Directing customers to subscription through app behaviour analysis.
 
-**Link:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f6117778433a12b7bb6f9f77497ef91642bde977)
+**Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f6117778433a12b7bb6f9f77497ef91642bde977)
