@@ -27,3 +27,32 @@ for i in range(1, dataset2.shape[1] + 1):
     
     plt.hist(dataset2.iloc[:, i - 1], bins=vals, color='#3F5D7D')
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+
+# Correlation with Response Variable
+dataset2.corrwith(dataset.enrolled).plot.bar(figsize=(20,10),
+                  title = 'Correlation with Reposnse variable',
+                  fontsize = 15, rot = 45,
+                  grid = True)
+
+sn.set(style="white", font_scale=2)
+corr = dataset2.corr()
+
+mask = np.zeros_like(corr, dtype=np.bool)
+mask[np.triu_indices_from(mask)] = True
+
+f, ax = plt.subplots(figsize=(18, 15))
+f.suptitle("Correlation Matrix", fontsize = 40)
+cmap = sn.diverging_palette(220, 10, as_cmap=True)
+sn.heatmap(corr, mask=mask, cmap=cmap, vmax=.3, center=0,
+            square=True, linewidths=.5, cbar_kws={"shrink": .5})
+
+dataset.dtypes
+dataset["first_open"] = [parser.parse(row_date) for row_date in dataset["first_open"]]
+dataset["enrolled_date"] = [parser.parse(row_date) if isinstance(row_date, str) else row_date for row_date in dataset["enrolled_date"]]
+dataset.dtypes
+
+dataset["difference"] = (dataset.enrolled_date-dataset.first_open).astype('timedelta64[h]')
+response_hist = plt.hist(dataset["difference"].dropna(), color='#3F5D7D')
+plt.title('Distribution of Time-Since-Screen-Reached')
+plt.show()
+
