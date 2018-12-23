@@ -414,3 +414,9 @@
 **Today's Progress:** Directing customers to subscription through app behaviour analysis.
 
 **Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f6117778433a12b7bb6f9f77497ef91642bde977)
+
+## Day 60 : Dec 23, 2018
+
+**Today's Progress:** Worked on exploratory data analysis on appdata dataset.
+
+**Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ff3f7690a58b076a59c43ea0928bc9f19a1cc3ac)
