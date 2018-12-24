@@ -420,3 +420,9 @@
 **Today's Progress:** Worked on exploratory data analysis on appdata dataset.
 
 **Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ff3f7690a58b076a59c43ea0928bc9f19a1cc3ac)
+
+## Day 61 : Dec 24, 2018
+
+**Today's Progress:** Loading top screens dataset and mapped screens to field then created new app data dataset.
+
+**Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ceff43aa38469daf0d0a563c7b9d5eeb16f735d6)
