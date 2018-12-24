@@ -97,3 +97,22 @@ cm_screens = ["Credit1",
                "Credit3Dashboard"]
 dataset["CMCount"] = dataset[cm_screens].sum(axis=1)
 dataset = dataset.drop(columns=cm_screens)
+
+cc_screens = ["CC1",
+                "CC1Category",
+                "CC3"]
+dataset["CCCount"] = dataset[cc_screens].sum(axis=1)
+dataset = dataset.drop(columns=cc_screens)
+
+loan_screens = ["Loan",
+               "Loan2",
+               "Loan3",
+               "Loan4"]
+dataset["LoansCount"] = dataset[loan_screens].sum(axis=1)
+dataset = dataset.drop(columns=loan_screens)
+
+dataset.head()
+dataset.describe()
+dataset.columns
+
+dataset.to_csv('Datasets/new_appdata10.csv', index = False)
