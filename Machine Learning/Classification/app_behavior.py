@@ -56,3 +56,44 @@ response_hist = plt.hist(dataset["difference"].dropna(), color='#3F5D7D')
 plt.title('Distribution of Time-Since-Screen-Reached')
 plt.show()
 
+plt.hist(dataset["difference"].dropna(), color='#3F5D7D', range = [0, 100])
+plt.title('Distribution of Time-Since-Screen-Reached')
+plt.show()
+
+dataset.loc[dataset.difference > 48, 'enrolled'] = 0
+dataset = dataset.drop(columns=['enrolled_date', 'difference', 'first_open'])
+
+# Load Top Screens
+top_screens = pd.read_csv('Datasets/top_screens.csv').top_screens.values
+top_screens
+
+# Mapping Screens to Fields
+dataset["screen_list"] = dataset.screen_list.astype(str) + ','
+
+for sc in top_screens:
+    dataset[sc] = dataset.screen_list.str.contains(sc).astype(int)
+    dataset['screen_list'] = dataset.screen_list.str.replace(sc+",", "")
+
+dataset['Other'] = dataset.screen_list.str.count(",")
+dataset = dataset.drop(columns=['screen_list'])
+
+savings_screens = ["Saving1",
+                    "Saving2",
+                    "Saving2Amount",
+                    "Saving4",
+                    "Saving5",
+                    "Saving6",
+                    "Saving7",
+                    "Saving8",
+                    "Saving9",
+                    "Saving10"]
+dataset["SavingCount"] = dataset[savings_screens].sum(axis=1)
+dataset = dataset.drop(columns=savings_screens)
+
+cm_screens = ["Credit1",
+               "Credit2",
+               "Credit3",
+               "Credit3Container",
+               "Credit3Dashboard"]
+dataset["CMCount"] = dataset[cm_screens].sum(axis=1)
+dataset = dataset.drop(columns=cm_screens)
