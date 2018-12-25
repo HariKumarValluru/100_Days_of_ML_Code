@@ -426,3 +426,9 @@
 **Today's Progress:** Loading top screens dataset and mapped screens to field then created new app data dataset.
 
 **Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/ceff43aa38469daf0d0a563c7b9d5eeb16f735d6)
+
+## Day 62 : Dec 25, 2018
+
+**Today's Progress:** Loaded new appdata dataset and applied feature scaling then implemented logistic regression for predicting enrolled users.
+
+**Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f3a78b78ccad1141a62afce76a37734d6f78ae7b)
