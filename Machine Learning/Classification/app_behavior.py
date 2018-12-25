@@ -116,3 +116,19 @@ dataset.describe()
 dataset.columns
 
 dataset.to_csv('Datasets/new_appdata10.csv', index = False)
+
+dataset = pd.read_csv('Datasets/new_appdata10.csv')
+
+response = dataset["enrolled"]
+dataset = dataset.drop(columns="enrolled")
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(dataset, response,
+                                                    test_size = 0.2,
+                                                    random_state = 0)
+
+# Removing Identifiers
+train_identity = X_train['user']
+X_train = X_train.drop(columns = ['user'])
+test_identity = X_test['user']
+X_test = X_test.drop(columns = ['user'])
