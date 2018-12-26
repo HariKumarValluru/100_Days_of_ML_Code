@@ -432,3 +432,9 @@
 **Today's Progress:** Loaded new appdata dataset and applied feature scaling then implemented logistic regression for predicting enrolled users.
 
 **Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/f3a78b78ccad1141a62afce76a37734d6f78ae7b)
+
+## Day 63 : Dec 26, 2018
+
+**Today's Progress:** Tuning the model and finding the best params.
+
+**Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/93715ef3e561bea533b892a39265bbb915a67069)
