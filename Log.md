@@ -438,3 +438,9 @@
 **Today's Progress:** Tuning the model and finding the best params.
 
 **Link of Work:** [App Behaviour Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/93715ef3e561bea533b892a39265bbb915a67069)
+
+## Day 64 : Dec 27, 2018
+
+**Today's Progress:** Did exploratory data analysis for predicting the likelihood of e-signing a loan based on financial history.
+
+**Link of Work:** [Exploratory Data Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/263b727842de906697fd088b86ec3a9d7d790c8b)
