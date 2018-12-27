@@ -5,5 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sn
 
-dataset = pd.read_csv('financial_data.csv')
+dataset = pd.read_csv('Datasets/financial_data.csv')
 
+dataset.head()
+dataset.columns
+dataset.describe()
+
+dataset.isna().any() 
