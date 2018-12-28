@@ -46,3 +46,39 @@ cmap = sn.diverging_palette(220, 10, as_cmap=True)
 
 sn.heatmap(corr, mask=mask, cmap=cmap, vmax=.3, center=0,
             square=True, linewidths=.5, cbar_kws={"shrink": .5})
+
+train = pd.read_csv('Datasets/financial_data.csv')
+
+train = train.drop(columns = ['months_employed'])
+train['personal_account_months'] = (train.personal_account_m + (train.personal_account_y * 12))
+train[['personal_account_m', 'personal_account_y', 'personal_account_months']].head()
+train = train.drop(columns = ['personal_account_m', 'personal_account_y'])
+
+train = pd.get_dummies(train)
+train.train
+
+train = train.drop(columns = ['pay_schedule_semi-monthly'])
+
+response = train["e_signed"]
+users = train['entry_id']
+train = train.drop(columns = ["e_signed", "entry_id"])
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(train,
+                                                    response,
+                                                    test_size = 0.2,
+                                                    random_state = 0)
+
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train2 = pd.DataFrame(sc_X.fit_transform(X_train))
+X_test2 = pd.DataFrame(sc_X.transform(X_test))
+X_train2.columns = X_train.columns.values
+X_test2.columns = X_test.columns.values
+X_train2.index = X_train.index.values
+X_test2.index = X_test.index.values
+X_train = X_train2
+X_test = X_test2
+
+
