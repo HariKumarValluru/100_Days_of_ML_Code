@@ -444,3 +444,9 @@
 **Today's Progress:** Did exploratory data analysis for predicting the likelihood of e-signing a loan based on financial history.
 
 **Link of Work:** [Exploratory Data Analysis](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/263b727842de906697fd088b86ec3a9d7d790c8b)
+
+## Day 65 : Dec 28, 2018
+
+**Today's Progress:** Worked on feature engineering, one hot encoding and feature scaling.
+
+**Link of Work:** [e-Signing](https://github.com/HariKumarValluru/100_Days_of_ML_Code/commit/c4217c579797f0bc8b97c8210d54bd1f8dcafce9)
